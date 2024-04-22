@@ -7,7 +7,7 @@
     <meta name="description" content="Bemet - Butcher & Meat Shop HTML Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="uploads/img/favicon.png">
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
@@ -92,7 +92,7 @@
                             <div class="mobile-nav-toggler"><i class="fas fa-bars"></i></div>
                             <nav class="menu-nav">
                                 <div class="logo">
-                                    <a href="index-2.html"><img src="assets/img/logo/logo.png" alt="Logo"></a>
+                                    <a href="index-2.html"><img src="uploads/img/logo/logo.png" alt="Logo"></a>
                                 </div>
                                 <div class="navbar-wrap main-menu d-none d-lg-flex">
                                     <ul class="navigation">
@@ -149,7 +149,7 @@
                             <nav class="menu-box">
                                 <div class="close-btn"><i class="fas fa-times"></i></div>
                                 <div class="nav-logo">
-                                    <a href="index-2.html"><img src="assets/img/logo/logo.png" alt="Logo"></a>
+                                    <a href="index-2.html"><img src="uploads/img/logo/logo.png" alt="Logo"></a>
                                 </div>
                                 <div class="menu-outer">
                                     <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
@@ -208,7 +208,7 @@
                         <ul class="list-wrap">
                             <li class="order-0 order-lg-2">
                                 <div class="footer-logo">
-                                    <a href="index-2.html"><img src="assets/img/logo/w_logo.png" alt=""></a>
+                                    <a href="index-2.html"><img src="uploads/img/logo/w_logo.png" alt=""></a>
                                 </div>
                             </li>
                             <li>
@@ -286,14 +286,14 @@
                                 <h4 class="fw-title">instagram</h4>
                                 <div class="footer-instagram">
                                     <ul class="list-wrap">
-                                        <li><a href="#"><img src="assets/img/images/footer_insta01.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="assets/img/images/footer_insta02.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="assets/img/images/footer_insta03.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="assets/img/images/footer_insta04.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="assets/img/images/footer_insta05.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="assets/img/images/footer_insta06.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="assets/img/images/footer_insta07.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="assets/img/images/footer_insta08.jpg" alt=""></a></li>
+                                        <li><a href="#"><img src="uploads/img/images/footer_insta01.jpg" alt=""></a></li>
+                                        <li><a href="#"><img src="uploads/img/images/footer_insta02.jpg" alt=""></a></li>
+                                        <li><a href="#"><img src="uploads/img/images/footer_insta03.jpg" alt=""></a></li>
+                                        <li><a href="#"><img src="uploads/img/images/footer_insta04.jpg" alt=""></a></li>
+                                        <li><a href="#"><img src="uploads/img/images/footer_insta05.jpg" alt=""></a></li>
+                                        <li><a href="#"><img src="uploads/img/images/footer_insta06.jpg" alt=""></a></li>
+                                        <li><a href="#"><img src="uploads/img/images/footer_insta07.jpg" alt=""></a></li>
+                                        <li><a href="#"><img src="uploads/img/images/footer_insta08.jpg" alt=""></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -311,7 +311,7 @@
                         </div>
                         <div class="col-lg-6 col-md-5">
                             <div class="footer-card text-end">
-                                <img src="assets/img/images/card.png" alt="">
+                                <img src="uploads/img/images/card.png" alt="">
                             </div>
                         </div>
                     </div>
