@@ -1,8 +1,8 @@
-drop database if exists ecourse;
+drop database if exists on_tap;
 
-Create database ecourse;
+Create database on_tap;
 
-use ecourse;
+use on_tap;
 
 Create table categories
 (
@@ -28,6 +28,17 @@ Create table products
     FOREIGN KEY (category_id) REFERENCES categories(id)
 );
 
+Create table product_images
+(
+    id int primary key auto_increment,
+    image varchar(100) NOT NULL,
+    product_id int NOT NULL,
+    status tinyint(1) DEFAULT '0',
+    created_at date DEFAULT current_timestamp(),
+    updated_at date null,
+    FOREIGN KEY (product_id) REFERENCES products(id)
+);
+
 Create table users
 (
     id int primary key auto_increment,
@@ -38,6 +49,17 @@ Create table users
     updated_at date null
 );
 
+Create table personal_access_tokens
+(
+    id int primary key auto_increment,
+    name varchar(100) NOT NULL,
+    email varchar(100) NOT NULL UNIQUE,
+    password varchar(200) NOT NULL,
+    created_at date DEFAULT current_timestamp(),
+    updated_at date null
+);
+
+
 Create table banners
 (
     id int primary key auto_increment,
@@ -46,7 +68,7 @@ Create table banners
     image varchar(100) NOT NULL,
     description varchar(255) NOT NULL,
     position varchar(100) DEFAULT 'top-banner',
-    prioty tinyint DEFAULT '0',
+    priority tinyint DEFAULT '0',
     status tinyint(1) DEFAULT '0',
     created_at date DEFAULT current_timestamp(),
     updated_at date null
@@ -66,6 +88,7 @@ Create table blogs
     updated_at date null
 );
 
+
 Create table customers
 (
     id int primary key auto_increment,
@@ -76,6 +99,14 @@ Create table customers
     gender tinyint NOT NULL DEFAULT '0',
     password varchar(200) NOT NULL,
     email_verified_at date null,
+    created_at date DEFAULT current_timestamp(),
+    updated_at date null
+);
+
+Create table customer_reset_tokens
+(
+    email varchar(100) primary key,
+    token varchar(100) NOT NULL UNIQUE,
     created_at date DEFAULT current_timestamp(),
     updated_at date null
 );
