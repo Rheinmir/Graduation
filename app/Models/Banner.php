@@ -14,4 +14,8 @@ class Banner extends Model
     public function product(){
         return $this->hasMany(Product::class, 'category_id','id');    
     }
+
+    public function scopeBanner($q, $pos = 'top-banner') {
+        Banner::where('position',$pos)->orderBy('priority','ASC');
+    }
 }
