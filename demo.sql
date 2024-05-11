@@ -160,11 +160,20 @@ Create table order_details
 
 INSERT INTO banners(name, image, link, status) VALUES
 ('Banner 1', 'banner_bg.png', '#', 1) ;
-
 INSERT INTO banners(name, image, position, status) VALUES
 ('gallery 1', 'gallery_img01.png', 'gallery', 1) ,
 ('gallery 2', 'gallery_img02.png', 'gallery', 1) ,
 ('gallery 3', 'gallery_img03.png', 'gallery', 1) ;
+
+
+INSERT INTO banners(name, status, link, description, position, priority, image) VALUES
+('Fresh Meat',1, '#','','top-banner',0,'banner_bg.png') ;
+
+INSERT INTO banners(name, status, link, description, position, priority, image) VALUES
+('gallery 1',1, '#','','gallery',1,'gallery_img01.png') ;
+('gallery 2',1, '#','','gallery',2,'gallery_img02.png') ;
+('gallery 3',1, '#','','gallery',3,'gallery_img03.png') ;
+
 
 INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES
 ('Admin Manager', 'admin@gmail.com', '$2y$12$ElFD8Eq8bOZ8bsym04rY1e6znHP874r/FSPw/ZfMy1CB85O/Yc60q', '2023-12-04', '2023-12-04');
