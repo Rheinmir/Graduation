@@ -9,6 +9,7 @@ class HomeController extends Controller
 {
     public function index(){
         $topBanner = Banner::getBanner()->first();
+        $galleries = Banner::getBanner('gallery')->get();
         return view('home.index',compact('topBanner'));
     }
 
@@ -20,4 +21,3 @@ class HomeController extends Controller
 
 
         // $topBanner = Banner::where('position','top-banner')->orderBy('priority','ASC') -> first();
-        // $gallerys = Banner::getBanner('gallery')->get();
