@@ -9,14 +9,14 @@
 <div class="area-bg" data-background="uploads/bg/area_bg.jpg">
 
     <!-- banner-area -->
-    <section class="banner-area banner-bg tg-motion-effects" data-background="uploads/banner/banner_bg.png">
+    <section class="banner-area banner-bg tg-motion-effects" data-background="uploads/banner/{{$topBanner->image}}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="banner-content">
-                        <h1 class="title wow fadeInUp" data-wow-delay=".2s">Fresh Meat</h1>
+                        <h1 class="title wow fadeInUp" data-wow-delay=".2s">{{$topBanner->name}}</h1>
                         <span class="sub-title wow fadeInUp" data-wow-delay=".4s">Butcher & Meat shop</span>
-                        <a href="shop.html" class="btn wow fadeInUp" data-wow-delay=".6s">order now</a>
+                        <a href="{{$topBanner->link}}" class="btn wow fadeInUp" data-wow-delay=".6s">order now</a>
                     </div>
                     <div class="banner-img text-center wow fadeInUp" data-wow-delay=".8s">
                         <img src="uploads/banner/banner_img.png" alt="">
