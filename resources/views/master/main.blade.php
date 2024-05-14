@@ -92,7 +92,7 @@
                             <div class="mobile-nav-toggler"><i class="fas fa-bars"></i></div>
                             <nav class="menu-nav">
                                 <div class="logo">
-                                    <a href="index-2.html"><img src="uploads/img/logo/logo.png" alt="Logo"></a>
+                                    <a href="index-2.html"><img src="uploads/logo/logo.png" alt="Logo"></a>
                                 </div>
                                 <div class="navbar-wrap main-menu d-none d-lg-flex">
                                     <ul class="navigation">
@@ -149,7 +149,7 @@
                             <nav class="menu-box">
                                 <div class="close-btn"><i class="fas fa-times"></i></div>
                                 <div class="nav-logo">
-                                    <a href="index-2.html"><img src="uploads/img/logo/logo.png" alt="Logo"></a>
+                                    <a href="index-2.html"><img src="uploads/logo/logo.png" alt="Logo"></a>
                                 </div>
                                 <div class="menu-outer">
                                     <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
@@ -208,7 +208,7 @@
                         <ul class="list-wrap">
                             <li class="order-0 order-lg-2">
                                 <div class="footer-logo">
-                                    <a href="index-2.html"><img src="uploads/img/logo/w_logo.png" alt=""></a>
+                                    <a href="index-2.html"><img src="uploads/logo/w_logo.png" alt=""></a>
                                 </div>
                             </li>
                             <li>

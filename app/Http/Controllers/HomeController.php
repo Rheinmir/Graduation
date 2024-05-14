@@ -9,9 +9,8 @@ class HomeController extends Controller
 {
     public function index(){
         $topBanner = Banner::getBanner()->first();
-        // dd($topBanner);
         $galleries = Banner::getBanner('gallery')->get();
-        return view('home.index',compact('topBanner'));
+        return view('home.index',compact('topBanner','galleries'));
     }
 
     public function about() {

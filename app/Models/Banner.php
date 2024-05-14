@@ -16,7 +16,7 @@ class Banner extends Model
     }
 
     public function scopeGetBanner($q, $pos = 'top-banner') {
-        $q = $q->where('position',$pos)->orderBy('priority','ASC');
+        $q = $q->where('position',$pos)->where('status',1)->orderBy('priority','ASC');
         return $q;
     }
 }

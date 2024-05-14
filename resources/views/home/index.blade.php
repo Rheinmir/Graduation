@@ -170,20 +170,17 @@
 <!-- product-area-end -->
 
 <!-- gallery-area -->
-<div class="gallery-area gallery-bg" data-background="uploads/bg/product_bg01.jpg">
+<div class="gallery-area gallery-bg" data-background="uploads/bg/{{$galleries[0]->image}}">
     <div class="container">
         <div class="gallery-item-wrap">
             <div class="row justify-content-center">
                 <div class="col-88">
                     <div class="gallery-active">
+                        @foreach($galleries as $ga)
                         <div class="gallery-item">
-                            <a href="uploads/gallery/gallery_img01.png" class="popup-image"><img src="uploads/gallery/gallery_img01.png" alt=""></a>
+                            <a href="uploads/gallery/{{$ga->image}}" class="popup-image"><img src="uploads/gallery/gallery_img01.png" alt=""></a>
                         </div>
-                        <div class="gallery-item">
-                            <a href="uploads/gallery/gallery_img02.png" class="popup-image"><img src="uploads/gallery/gallery_img02.png" alt=""></a>
-                        </div>
-                        <div class="gallery-item">
-                            <a href="uploads/gallery/gallery_img03.png" class="popup-image"><img src="uploads/gallery/gallery_img03.png" alt=""></a>
+                        @endforeach
                         </div>
                     </div>
                 </div>
