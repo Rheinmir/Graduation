@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="assets/css/default.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.css" />
 </head>
 
 <body>
@@ -67,9 +68,13 @@
                         <div class="header-top-right">
                             <div class="header-top-menu">
                                 <ul class="list-wrap">
-                                    <li><a href="{{ route('account.login')}}">Login</a></li>
-                                    <li><a href="{{ route('account.register')}}">Register</a></li>
-                                    <li><a href="contact.html">Log out</a></li>
+                                @if(auth('cus')->check())
+                                        <li><a href="{{ route('account.profile') }}">Hi {{ auth('cus')->user()->name }}</a></li>
+                                            <li><a href="{{ route('account.logout') }}">Logout</a></li>
+                                        @else
+                                            <li><a href="{{ route('account.login') }}">Login</a></li>
+                                            <li><a href="{{ route('account.register') }}">Register</a></li>
+                                        @endif
                                 </ul>
                             </div>
                             <div class="header-top-social">
@@ -337,5 +342,32 @@
     <script src="assets/js/ajax-form.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js"></script>
+    @yield('js')
+        @if(Session::has('ok'))
+        <script>
+            $.toast({
+                heading: 'Thông báo',
+                text: "{{ Session::get('ok') }}",
+                showHideTransition: 'slide',
+                icon: 'success',
+                position: 'top-center',
+                hideAfter: 10000
+            })
+        </script>
+        @endif
+
+        @if(Session::has('no'))
+        <script>
+            $.toast({
+                heading: 'Thông báo',
+                text: "{{ Session::get(' no') }}",
+                showHideTransition: 'slide',
+                icon: 'error',
+                position: 'top-center',
+                hideAfter: 10000
+            })
+        </script>
+        @endif
 </body>
 </html>

@@ -21,6 +21,7 @@ Route::get('/about-us', [HomeController::class,'about'])->name('home.about');
 
 Route::GROUP(['prefix' =>'account'], function() {
     Route::get('/login', [AccountController::class,'login'])->name('account.login');
+    Route::get('/logout', [AccountController::class, 'logout'])->name('account.logout');
     Route::get('/verify-account/{email}', [AccountController::class, 'verify'])->name('account.verify');
     Route::post('/login', [AccountController::class,'check_login']);
 
@@ -30,11 +31,11 @@ Route::GROUP(['prefix' =>'account'], function() {
     Route::get('/profile', [AccountController::class,'profile'])->name('account.profile');
     Route::post('/register', [AccountController::class, 'check_register']);
 
-    Route::get('/change-password', [AccountController::class,'change-password'])->name('account.change-password');
-    Route::post('/change-password', [AccountController::class,'check_change-password']);
+    Route::get('/change-password', [AccountController::class, 'change_password'])->name('account.change_password');
+        Route::post('/change-password', [AccountController::class, 'check_change_password']);
 
-    Route::get('/forgot-password', [AccountController::class,'change-password'])->name('account.change-password');
-    Route::post('/forgot-password', [AccountController::class,'check_change-password']);
+    Route::get('/forgot-password', [AccountController::class, 'forgot_password'])->name('account.forgot_password');
+    Route::post('/forgot-password', [AccountController::class, 'check_forgot_password']);
 
     Route::get('/reset-password', [AccountController::class,'check_reset-password'])->name('account.reset-password');
     Route::post('/reset-password', [AccountController::class,'check_reset-password']);

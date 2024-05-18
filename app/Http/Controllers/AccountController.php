@@ -15,6 +15,32 @@ class AccountController extends Controller
     public function login() {
         return view('account.login');
     }
+    public function logout() {
+        auth('cus')->logout();
+        return redirect()->route('account.login')->with('ok','Bye bye!');
+    }
+    public function check_login(Request $req) {
+        $req->validate([
+            'email' => 'required|exists:customers',
+            'password' => 'required'
+        ]);
+
+        $data = $req->only('email','password');
+
+        $check = auth('cus')->attempt($data);
+
+        if ($check) {
+            if (auth('cus')->user()->email_verified_at == '') {
+                auth('cus')->logout();
+                return redirect()->back()->with('no','You account is not verify, please check email again');
+            }
+
+            return redirect()->route('home.index')->with('ok','Welcome back');
+        }
+
+        return redirect()->back()->with('no','Your account or password invalid');
+
+    }
     public function register() {
         return view('account.register');
     }
@@ -35,14 +61,14 @@ class AccountController extends Controller
         if ($acc = Customer::create($data) ) {
             // Sends a verification email to the specified email address.
             Mail::to($acc->email)->send(new VerifyAccount($acc));
-            return redirect()->route('account.login')->with('Ok','Register successfully, please check your email to verify account');
+            return redirect()->route('account.login')->with('ok','Register successfully, please check your email to verify account');
         }
-        return redirect()->back()->with('no','Smething error, please try again');
+        return redirect()->back()->with('no','Something error, please try again');
     }
     public function verify($email) {
         $acc = Customer::where('email', $email)->whereNUll('email_verified_at')->firstOrFail();
         Customer::where('email', $email)->update(['email_verified_at' => date('Y-m-d')]);
-        return redirect()->route('account.login')->with('Ok','Verify account successfully, Now you can login');
+        return redirect()->route('account.login')->with('ok','Verify account successfully, Now you can login');
     }
 
     public function change_password() {
