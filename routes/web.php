@@ -28,11 +28,13 @@ Route::GROUP(['prefix' =>'account'], function() {
     Route::get('/register', [AccountController::class,'register'])->name('account.register');
     Route::post('/register', [AccountController::class,'check_register']);
 
-    Route::get('/profile', [AccountController::class,'profile'])->name('account.profile');
-    Route::post('/register', [AccountController::class, 'check_register']);
+    Route::group(['middleware' => 'customer'], function() {
+        Route::get('/profile', [AccountController::class, 'profile'])->name('account.profile');
+        Route::post('/profile', [AccountController::class, 'check_profile']);
 
-    Route::get('/change-password', [AccountController::class, 'change_password'])->name('account.change_password');
+        Route::get('/change-password', [AccountController::class, 'change_password'])->name('account.change_password');
         Route::post('/change-password', [AccountController::class, 'check_change_password']);
+    });
 
     Route::get('/forgot-password', [AccountController::class, 'forgot_password'])->name('account.forgot_password');
     Route::post('/forgot-password', [AccountController::class, 'check_forgot_password']);

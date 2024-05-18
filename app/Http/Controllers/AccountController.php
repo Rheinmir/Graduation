@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Mail\Mailer as MailMailer;
 use Illuminate\Support\Facades\Mail as FacadesMail;
 use Mail;
+use Illuminate\Support\Facades\Hash;
 
 class AccountController extends Controller
 {
@@ -61,7 +62,7 @@ class AccountController extends Controller
         if ($acc = Customer::create($data) ) {
             // Sends a verification email to the specified email address.
             Mail::to($acc->email)->send(new VerifyAccount($acc));
-            return redirect()->route('account.login')->with('ok','Register successfully, please check your email to verify account');
+            return redirect()->route('account.profile')->with('ok','Register successfully, please check your email to verify account');
         }
         return redirect()->back()->with('no','Something error, please try again');
     }
@@ -84,9 +85,32 @@ class AccountController extends Controller
 
     }
     public function profile() {
+        $auth = auth('cus')->user();
         return view('account.profile', compact('auth'));
     }
-    public function check_profile() {
+
+    public function check_profile(Request $req) {
+        $auth = auth('cus')->user();
+        $req->validate([
+            'name' => 'required|min:6|max:100',
+            'email' => 'required|email|min:6|max:100|unique:customers,email,'.$auth->id,
+            'password' => ['required', function($attr, $value, $fail) use($auth) {
+                if (!Hash::check($value, $auth->password)) {
+                    return $fail('Your password í not mutch');
+                }
+            }],
+        ], [
+            'name.required' => 'Họ tên không được để tróng',
+            'name.min' => 'Họ ten tối thiểu là 6 ký tự'
+        ]);
+
+        $data = $req->only('name','email','phone','address','gender');
+
+        $check = $auth->update($data);
+        if ($check) {
+            return redirect()->back()->with('ok','Update your profile successfuly');
+        }
+        return redirect()->back()->with('no','Something error, please check agian');
 
     }
     public function reset_password() {
