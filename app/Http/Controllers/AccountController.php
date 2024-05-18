@@ -73,9 +73,31 @@ class AccountController extends Controller
     }
 
     public function change_password() {
-        return view('account.changer_pasword');
+        return view('account.change_password');
     }
-    public function check_change_password() {
+
+    public function check_change_password(Request $req) {
+        $auth = auth('cus')->user();
+        $req->validate([
+            'old_password' => [
+                'required',
+                function($attr, $value, $fail) use($auth)  {
+                    $auth = auth('cus')->user();
+                    if (!Hash::check($value, $auth->password) ) {
+                        $fail('Your password is not match');
+                    }
+                }],
+            'password' => 'required|min:4',
+            'confirm_password' => 'required|same:password'
+        ]);
+
+        $data['password'] = bcrypt($req->password);
+        $check = $auth->update($data);
+        if ($check) {
+            auth('cus')->logout();
+            return redirect()->route('account.login')->with('ok','Update your password successfuly');
+        }
+        return redirect()->back()->with('no','Something error, please check agian');
 
     }
     public function forgot_password() {
