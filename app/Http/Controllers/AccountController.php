@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ForgotPassword;
 use App\Mail\VerifyAccount;
 use App\Models\Customer;
+use App\Models\CustomerResetToken;
 use Illuminate\Contracts\Mail\Mailer;
 use Illuminate\Http\Request;
 use Illuminate\Mail\Mailer as MailMailer;
@@ -103,7 +105,26 @@ class AccountController extends Controller
     public function forgot_password() {
         return view('account.forgot_password');
     }
-    public function check_forgot_password() {
+
+    public function check_forgot_password(Request $req) {
+        $req->validate([
+            'email' => 'required|exists:customers'
+        ]);
+
+        $customer = Customer::where('email', $req->email)->first();
+
+        $token = \Str::random(50);
+        $tokenData = [
+            'email' => $req->email,
+            'token' => $token
+        ];
+
+        if (CustomerResetToken::create($tokenData)) {
+            Mail::to($req->email)->send(new ForgotPassword($customer, $token));
+            return redirect()->route('account.login')->with('ok','Send email successfully, please check email to continue');
+        }
+
+        return redirect()->back()->with('no','Something error, please check agian');
 
     }
     public function profile() {
@@ -135,10 +156,33 @@ class AccountController extends Controller
         return redirect()->back()->with('no','Something error, please check agian');
 
     }
-    public function reset_password() {
-        return view('account.login');
+    public function reset_password($token) {
+
+        $tokenData = CustomerResetToken::checkToken($token);
+
+        return view('account.reset_password');
     }
-    public function check_reset_password() {
+
+    public function check_reset_password($token) {
+        request()->validate([
+            'password' => 'required|min:4',
+            'confirm_password' => 'required|same:password'
+        ]);
+
+        $tokenData = CustomerResetToken::checkToken($token);
+        $customer = $tokenData->customer;
+
+        $data = [
+            'password' => bcrypt(request(('password')))
+        ];
+
+        $check = $customer->update($data);
+
+        if ($check) {
+            return redirect()->route('account.login')->with('ok','Update your password successfuly');
+        }
+
+        return redirect()->back()->with('no','Something error, please check agian');
 
     }
 }

@@ -362,7 +362,7 @@
         <script>
             $.toast({
                 heading: 'Thông báo',
-                text: "{{ Session::get(' no') }}",
+                text: "{{ Session::get('no') }}",
                 showHideTransition: 'slide',
                 icon: 'error',
                 position: 'top-center',

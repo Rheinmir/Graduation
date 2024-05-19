@@ -39,7 +39,21 @@ Route::GROUP(['prefix' =>'account'], function() {
     Route::get('/forgot-password', [AccountController::class, 'forgot_password'])->name('account.forgot_password');
     Route::post('/forgot-password', [AccountController::class, 'check_forgot_password']);
 
-    Route::get('/reset-password', [AccountController::class,'check_reset-password'])->name('account.reset-password');
-    Route::post('/reset-password', [AccountController::class,'check_reset-password']);
+    Route::get('/reset-password/{token}', [AccountController::class, 'reset_password'])->name('account.reset_password');
+    Route::post('/reset-password/{token}', [AccountController::class, 'check_reset_password']);
 });
 
+Route::get('/admin/login', [AdminController::class, 'login'])->name('admin.login');
+Route::post('/admin/login', [AdminController::class, 'check_login']);
+
+Route::group(['prefix' => 'admin','middleware'=>'auth'], function() {
+    Route::get('/', [AdminController::class, 'index'])->name('admin.index');
+    Route::get('/logout', [AdminController::class, 'logout'])->name('admin.logout');
+    // Route::get('/order', [OrderController::class, 'index'])->name('order.index');
+    // Route::get('/order/detail/{order}', [OrderController::class, 'show'])->name('order.show');
+    // Route::get('/order/update-status/{order}', [OrderController::class, 'update'])->name('order.update');
+
+    // Route::resource('category', CategoryController::class);
+    // Route::resource('product', ProductController::class);
+    // Route::get('product-delete-image/{image}', [ProductController::class,'destroyImage'])->name('product.destroyImage');
+});

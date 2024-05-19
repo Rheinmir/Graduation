@@ -9,11 +9,11 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-content">
-                        <h2 class="title">Chang password</h2>
+                        <h2 class="title">Change password</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="{{ route('home.index') }}">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Chang password</li>
+                                <li class="breadcrumb-item active" aria-current="page">Change password</li>
                             </ol>
                         </nav>
                     </div>
@@ -32,7 +32,7 @@
                     <div class="col-lg-6">
                         <div class="contact-content">
                             <div class="section-title mb-15">
-                                <span class="sub-title">Chang your password</span>
+                                <span class="sub-title">Change your password</span>
                             </div>
                             <p>Meat provide well shaped fresh and the organic meat well <br> animals is Humans have hunted schistoric</p>
                             <form action="" method="POST">
@@ -61,7 +61,7 @@
                                         @enderror
                                     </div>
 
-                                    <button type="submit">Login</button>
+                                    <button type="submit">Change</button>
                                 </div>
                             </form>
                             <p class="ajax-response mb-0"></p>
