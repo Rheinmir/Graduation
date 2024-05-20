@@ -3,11 +3,12 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AccountController;
-use App\Http\Controllers\OrderController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\CategoryController;
-use App\Http\Controllers\Admin\ProductController                  ;
-
+use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,20 +18,29 @@ use App\Http\Controllers\Admin\ProductController                  ;
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider and all of them will
 | be assigned to the "web" middleware group. Make something great!
-|
+| Route::get();
+| Route::post();
+| Route::put();
+| Route::delete();
 */
 
-Route::get('/', [HomeController::class,'index'])->name('home.index');
-Route::get('/about-us', [HomeController::class,'about'])->name('home.about');
+Route::get('/', [HomeController::class, 'index'])->name('home.index');
+Route::get('/about-us', [HomeController::class, 'about'])->name('home.about');
+Route::get('/category/{cat}', [HomeController::class, 'category'])->name('home.category');
+Route::get('/product/{product}', [HomeController::class, 'product'])->name('home.product');
+Route::get('/favorite/{product}', [HomeController::class, 'favorite'])->name('home.favorite');
 
-Route::GROUP(['prefix' =>'account'], function() {
-    Route::get('/login', [AccountController::class,'login'])->name('account.login');
+
+Route::group(['prefix' => 'account'], function() {
+
+    Route::get('/login', [AccountController::class, 'login'])->name('account.login');
     Route::get('/logout', [AccountController::class, 'logout'])->name('account.logout');
-    Route::get('/verify-account/{email}', [AccountController::class, 'verify'])->name('account.verify');
-    Route::post('/login', [AccountController::class,'check_login']);
+    Route::get('/veryfy-account/{email}', [AccountController::class, 'veryfy'])->name('account.veryfy');
+    Route::post('/login', [AccountController::class, 'check_login']);
 
-    Route::get('/register', [AccountController::class,'register'])->name('account.register');
-    Route::post('/register', [AccountController::class,'check_register']);
+    Route::get('/register', [AccountController::class, 'register'])->name('account.register');
+    Route::get('/favorite', [AccountController::class, 'favorite'])->name('account.favorite');
+    Route::post('/register', [AccountController::class, 'check_register']);
 
     Route::group(['middleware' => 'customer'], function() {
         Route::get('/profile', [AccountController::class, 'profile'])->name('account.profile');
@@ -45,7 +55,28 @@ Route::GROUP(['prefix' =>'account'], function() {
 
     Route::get('/reset-password/{token}', [AccountController::class, 'reset_password'])->name('account.reset_password');
     Route::post('/reset-password/{token}', [AccountController::class, 'check_reset_password']);
+
 });
+
+// Route::group(['prefix' => 'cart','middleware' => 'customer'], function() {
+//     Route::get('/', [CartController::class, 'index'])->name('cart.index');
+//     Route::get('/add/{product}', [CartController::class, 'add'])->name('cart.add');
+//     Route::get('/delete/{product}', [CartController::class, 'delete'])->name('cart.delete');
+//     Route::get('/update/{product}', [CartController::class, 'update'])->name('cart.update');
+//     Route::get('/clear', [CartController::class, 'clear'])->name('cart.clear');
+// });
+
+
+// Route::group(['prefix' => 'order','middleware' => 'customer'], function() {
+
+//     Route::get('/checkout', [CheckoutController::class, 'checkout'])->name('order.checkout');
+//     Route::get('/history', [CheckoutController::class, 'history'])->name('order.history');
+//     Route::get('/detail/{order}', [CheckoutController::class, 'detail'])->name('order.detail');
+//     Route::post('/checkout', [CheckoutController::class, 'post_checkout']);
+
+//     Route::get('/verify/{token}', [CheckoutController::class, 'verify'])->name('order.verify');
+
+// });
 
 
 Route::get('/admin/login', [AdminController::class, 'login'])->name('admin.login');
@@ -62,3 +93,5 @@ Route::group(['prefix' => 'admin','middleware'=>'auth'], function() {
     Route::resource('product', ProductController::class);
     Route::get('product-delete-image/{image}', [ProductController::class,'destroyImage'])->name('product.destroyImage');
 });
+
+
