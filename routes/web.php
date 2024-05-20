@@ -3,6 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\ProductController                  ;
 
 
 /*
@@ -43,17 +47,18 @@ Route::GROUP(['prefix' =>'account'], function() {
     Route::post('/reset-password/{token}', [AccountController::class, 'check_reset_password']);
 });
 
+
 Route::get('/admin/login', [AdminController::class, 'login'])->name('admin.login');
 Route::post('/admin/login', [AdminController::class, 'check_login']);
 
 Route::group(['prefix' => 'admin','middleware'=>'auth'], function() {
     Route::get('/', [AdminController::class, 'index'])->name('admin.index');
     Route::get('/logout', [AdminController::class, 'logout'])->name('admin.logout');
-    // Route::get('/order', [OrderController::class, 'index'])->name('order.index');
-    // Route::get('/order/detail/{order}', [OrderController::class, 'show'])->name('order.show');
-    // Route::get('/order/update-status/{order}', [OrderController::class, 'update'])->name('order.update');
+    Route::get('/order', [OrderController::class, 'index'])->name('order.index');
+    Route::get('/order/detail/{order}', [OrderController::class, 'show'])->name('order.show');
+    Route::get('/order/update-status/{order}', [OrderController::class, 'update'])->name('order.update');
 
-    // Route::resource('category', CategoryController::class);
-    // Route::resource('product', ProductController::class);
-    // Route::get('product-delete-image/{image}', [ProductController::class,'destroyImage'])->name('product.destroyImage');
+    Route::resource('category', CategoryController::class);
+    Route::resource('product', ProductController::class);
+    Route::get('product-delete-image/{image}', [ProductController::class,'destroyImage'])->name('product.destroyImage');
 });

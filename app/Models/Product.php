@@ -8,9 +8,25 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
-    protected $fillable = ['name','status','price','sale_price','image','category_id','description'];
+    protected $appends = ['favorited'];
 
-    public function product(){
-        return $this->hasMany(Category::class, 'category_id','id');    
+
+    protected $fillable = ['name', 'price','sale_price', 'image', 'category_id', 'description', 'status'];
+
+    // 1-1
+    public function cat() {
+        return $this->hasOne(Category::class, 'id','category_id');
     }
+
+    // 1-n
+    public function images() {
+        return $this->hasMany(ProductImage::class, 'product_id','id');
+    }
+
+    public function getFavoritedAttribute() {
+        $favorited = Favorite::where(['product_id' => $this->id, 'customer_id' => auth('cus')->id()])->first();
+        return $favorited ? true : false;
+    }
+
+
 }
