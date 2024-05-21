@@ -41,7 +41,7 @@
                         <div class="features-item tg-motion-effects">
                             <div class="features-content">
                                 <span>{{$np->cat->name}}</span>
-                                <h4 class="title"><a href="">{{$np->name}}</a></h4>
+                                <h4 class="title"><a href="{{route('home.product', $np->id)}}">{{$np->name}}</a></h4>
                                 <div class="favorite-action">
                                     @if(auth('cus')->check())
                                         @if($np->favorited)
@@ -50,10 +50,10 @@
                                         <a title="Yêu thích" href="{{ route('home.favorite', $np->id) }}"><i class="far fa-heart"></i></a>
                                         @endif
 
-                                        <a title="Thêm vào giỏ hàng" href="{{ route('cart.add', $np->id) }}"><i class="fa fa-shopping-cart"></i></a>
+                                        <a title="Thêm vòa giỏ hàng" href="{{ route('cart.add', $np->id) }}"><i class="fa fa-shopping-cart"></i></a>
 
                                     @else
-                                    <a title="Thêm vào giỏ hàng" href="{{ route('account.login') }}" onclick="alert('vui lòng đăng nhập để thêm giỏ hàng')"><i class="fa fa-shopping-cart"></i></a>
+                                    <a title="Thêm vòa giỏ hàng" href="{{ route('account.login') }}" onclick="alert('vui lòng đăng nhập để thêm giỏ hàng')"><i class="fa fa-shopping-cart"></i></a>
 
                                     @endif
                                 </div>
@@ -101,11 +101,11 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="product-item">
                         <div class="product-img">
-                            <a href="{{route('home.product', $np->id)}}"><img src="uploads/product/{{$sp->image}}" alt=""></a>
+                            <a href="{{route('home.product', $sp->id)}}"><img src="uploads/product/{{$sp->image}}" alt=""></a>
                         </div>
                         <div class="product-content">
                             <div class="line" data-background="uploads/images/line.png"></div>
-                            <h4 class="title"><a href="{{route('home.product', $np->id)}}">{{$sp->name}}</a></h4>
+                            <h4 class="title"><a href="{{route('home.product', $sp->id)}}">{{$sp->name}}</a></h4>
                             @if($sp->sale_price > 0)
                                 <span ><s>${{number_format($sp->price)}}</s></span>
                                 <span class="price">${{number_format($sp->sale_price)}}</span>

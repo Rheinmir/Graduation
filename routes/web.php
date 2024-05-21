@@ -58,13 +58,13 @@ Route::group(['prefix' => 'account'], function() {
 
 });
 
-// Route::group(['prefix' => 'cart','middleware' => 'customer'], function() {
-//     Route::get('/', [CartController::class, 'index'])->name('cart.index');
-//     Route::get('/add/{product}', [CartController::class, 'add'])->name('cart.add');
-//     Route::get('/delete/{product}', [CartController::class, 'delete'])->name('cart.delete');
-//     Route::get('/update/{product}', [CartController::class, 'update'])->name('cart.update');
-//     Route::get('/clear', [CartController::class, 'clear'])->name('cart.clear');
-// });
+Route::group(['prefix' => 'cart','middleware' => 'customer'], function() {
+    Route::get('/', [CartController::class, 'index'])->name('cart.index');
+    Route::get('/add/{product}', [CartController::class, 'add'])->name('cart.add');
+    Route::get('/delete/{product}', [CartController::class, 'delete'])->name('cart.delete');
+    Route::get('/update/{product}', [CartController::class, 'update'])->name('cart.update');
+    Route::get('/clear', [CartController::class, 'clear'])->name('cart.clear');
+});
 
 
 // Route::group(['prefix' => 'order','middleware' => 'customer'], function() {

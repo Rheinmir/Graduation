@@ -14,7 +14,7 @@ class HomeController extends Controller
         $topBanner = Banner::getBanner()->first();
         $galleries = Banner::getBanner('gallery')->get();
 
-        $news_products = Product::orderBy('created_at', 'DESC')->limit(4)->get();
+        $news_products = Product::orderBy('created_at', 'DESC')->limit(2)->get();
         $sale_products = Product::orderBy('created_at', 'DESC')->where('sale_price','>', 0)->limit(3)->get();
         $feature_products = Product::inRandomOrder()->limit(4)->get();
         // dd ($news_products);
@@ -24,7 +24,8 @@ class HomeController extends Controller
     public function about() {
         return view('home.about');
     }
-    public function category (Category $cat)  {
+    // Displays products in a category and recent news with pagination and ordering.
+public function category (Category $cat)  {
         // $products = Product::where('category_id', $cat->id)->get();
         $products = $cat->products()->paginate(9);
         $news_products = Product::orderBy('created_at', 'DESC')->limit(3)->get();
@@ -35,21 +36,21 @@ class HomeController extends Controller
         $products = Product::where('category_id', $product->category_id)->limit(12)->get();
         return view('home.product', compact('product','products'));
     }
-    public function favorite ($product_id)  {
-        $data = [
-            'product_id' => $product_id,
-            'customer_id' => auth('cus')->id()
-        ];
+    // public function favorite ($product_id)  {
+    //     $data = [
+    //         'product_id' => $product_id,
+    //         'customer_id' => auth('cus')->id()
+    //     ];
 
-        // $favorited = Favorite::where(['product_id' => $product_id, 'customer_id' => auth('cus')->id()])->first();
-        // if($favorited) {
-        //     $favorited->delete();
-        //     return redirect()->back()-> with('ok','Bạn đã bỏ yêu thích sản phẩm');
+    //     $favorited = Favorite::where(['product_id' => $product_id, 'customer_id' => auth('cus')->id()])->first();
+    //     if($favorited) {
+    //         $favorited->delete();
+    //         return redirect()->back()-> with('ok','Bạn đã bỏ yêu thích sản phẩm');
 
-        // } else {
-        //     Favorite::create($data);
-        //     return redirect()->back()-> with('ok','Bạn đã yêu thích sản phẩm');
-        // }
+    //     } else {
+    //         Favorite::create($data);
+    //         return redirect()->back()-> with('ok','Bạn đã yêu thích sản phẩm');
+    //     }
 
-    }
+    // }
 }
