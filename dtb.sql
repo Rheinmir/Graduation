@@ -134,6 +134,17 @@ Create table favorites
     FOREIGN KEY (product_id) REFERENCES products(id)
 );
 
+Create table carts
+(
+    customer_id int NOT NULL,
+    product_id int NOT NULL,
+    price float(10,2) not null,
+    quantity int not null,
+    primary key (customer_id, product_id),
+    FOREIGN KEY (customer_id) REFERENCES customers(id),
+    FOREIGN KEY (product_id) REFERENCES products(id)
+);
+
 Create table orders
 (
     id int primary key auto_increment,

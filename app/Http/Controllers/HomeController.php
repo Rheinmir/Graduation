@@ -36,21 +36,21 @@ public function category (Category $cat)  {
         $products = Product::where('category_id', $product->category_id)->limit(12)->get();
         return view('home.product', compact('product','products'));
     }
-    // public function favorite ($product_id)  {
-    //     $data = [
-    //         'product_id' => $product_id,
-    //         'customer_id' => auth('cus')->id()
-    //     ];
+    public function favorite ($product_id)  {
+        $data = [
+            'product_id' => $product_id,
+            'customer_id' => auth('cus')->id()
+        ];
 
-    //     $favorited = Favorite::where(['product_id' => $product_id, 'customer_id' => auth('cus')->id()])->first();
-    //     if($favorited) {
-    //         $favorited->delete();
-    //         return redirect()->back()-> with('ok','Bạn đã bỏ yêu thích sản phẩm');
+        $favorited = Favorite::where(['product_id' => $product_id, 'customer_id' => auth('cus')->id()])->first();
+        if($favorited) {
+            $favorited->delete();
+            return redirect()->back()-> with('ok','Bạn đã bỏ yêu thích sản phẩm');
 
-    //     } else {
-    //         Favorite::create($data);
-    //         return redirect()->back()-> with('ok','Bạn đã yêu thích sản phẩm');
-    //     }
+        } else {
+            Favorite::create($data);
+            return redirect()->back()-> with('ok','Bạn đã yêu thích sản phẩm');
+        }
 
-    // }
+    }
 }

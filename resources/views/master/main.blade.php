@@ -68,7 +68,7 @@
                                 <div class="header-top-menu">
                                     <ul class="list-wrap">
                                         @if(auth('cus')->check())
-                                        <li><a href="{{ route('account.profile') }}">Hi, {{ auth('cus')->user()->name }}</a></li>
+                                        <li><a href="{{ route('account.profile') }}">Hi {{ auth('cus')->user()->name }}</a></li>
                                             <li><a href="{{ route('account.change_password') }}">Change Password</a></li>
                                             <li><a href="{{ route('account.favorite') }}">Favorites</a></li>
                                             <li><a href="{{ route('order.history') }}">My Orders</a></li>
@@ -135,9 +135,9 @@
                                                 <a href="#"><i class="flaticon-search"></i></a>
                                             </li>
                                             <li class="header-shop-cart">
-
+                                                <a href="{{route('cart.index')}}">
                                                     <i class="flaticon-shopping-basket"></i>
-
+                                                    <span>{{$carts->sum('quantity')}}</span>
                                                 </a>
                                             </li>
                                             <li class="header-btn"><a href="tel:0123456789" class="btn">+1 333 555 999</a></li>

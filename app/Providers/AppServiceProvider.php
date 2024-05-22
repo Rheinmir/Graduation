@@ -26,8 +26,8 @@ class AppServiceProvider extends ServiceProvider
 
         view()->composer('*', function($view) {
             $cats_home = Category::orderBy('name','ASC')->where('status', 1)->get();
-            // $carts = Cart::where('customer_id', auth('cus')->id())->get();
-            $view->with(compact('cats_home'));
+            $carts = Cart::where('customer_id', auth('cus')->id())->get();
+            $view->with(compact('cats_home','carts'));
         });
     }
 }

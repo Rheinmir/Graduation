@@ -40,7 +40,6 @@
                     </tr>
                 </thead>
                 <tbody>
-
                     @foreach ($favorites as $item)
                         <tr>
                             <td scope="row">{{ $loop->index + 1 }}</td>
@@ -55,7 +54,6 @@
                             </td>
                         </tr>
                     @endforeach
-
                 </tbody>
                </table>
             </div>

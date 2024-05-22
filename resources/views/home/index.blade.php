@@ -113,7 +113,7 @@
                                 <span class="price">${{number_format($sp->price)}}</span>
                                 @endif
                                 @if(auth('cus')->check())
-                                        @if($np->favorited)
+                                        @if($sp->favorited)
                                         <a title="Bỏ thích" onclick="return confirm('Bạn có muốn bỏ thích không')" href="{{ route('home.favorite', $sp->id) }}"><i class="fas fa-heart"></i></a>
                                         @else
                                         <a title="Yêu thích" href="{{ route('home.favorite', $sp->id) }}"><i class="far fa-heart"></i></a>
@@ -187,7 +187,7 @@
                                 <h4 class="title"><a href="{{route('home.product', $fp->id)}}">{{ $fp->name }}</a></h4>
                                 <p>{{ $fp->description }}</p>
                                 @if(auth('cus')->check())
-                                        @if($np->favorited)
+                                        @if($fp->favorited)
                                         <a title="Bỏ thích" onclick="return confirm('Bạn có muốn bỏ thích không')" href="{{ route('home.favorite', $fp->id) }}"><i class="fas fa-heart"></i></a>
                                         @else
                                         <a title="Yêu thích" href="{{ route('home.favorite', $fp->id) }}"><i class="far fa-heart"></i></a>

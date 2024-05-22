@@ -67,16 +67,16 @@ Route::group(['prefix' => 'cart','middleware' => 'customer'], function() {
 });
 
 
-// Route::group(['prefix' => 'order','middleware' => 'customer'], function() {
+Route::group(['prefix' => 'order','middleware' => 'customer'], function() {
 
-//     Route::get('/checkout', [CheckoutController::class, 'checkout'])->name('order.checkout');
-//     Route::get('/history', [CheckoutController::class, 'history'])->name('order.history');
-//     Route::get('/detail/{order}', [CheckoutController::class, 'detail'])->name('order.detail');
-//     Route::post('/checkout', [CheckoutController::class, 'post_checkout']);
+    Route::get('/checkout', [CheckoutController::class, 'checkout'])->name('order.checkout');
+    Route::get('/history', [CheckoutController::class, 'history'])->name('order.history');
+    Route::get('/detail/{order}', [CheckoutController::class, 'detail'])->name('order.detail');
+    Route::post('/checkout', [CheckoutController::class, 'post_checkout']);
 
-//     Route::get('/verify/{token}', [CheckoutController::class, 'verify'])->name('order.verify');
+    Route::get('/verify/{token}', [CheckoutController::class, 'verify'])->name('order.verify');
 
-// });
+});
 
 
 Route::get('/admin/login', [AdminController::class, 'login'])->name('admin.login');

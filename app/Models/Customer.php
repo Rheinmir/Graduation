@@ -26,6 +26,12 @@ class Customer extends Authenticatable
         'gender'
     ];
 
+    public function carts() {
+        return $this->hasMany(Cart::class, 'customer_id', 'id');
+    }
+    public function orders() {
+        return $this->hasMany(Order::class, 'customer_id', 'id')->orderBy('id','DESC');
+    }
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -45,4 +51,8 @@ class Customer extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function favorites() {
+        return $this->hasMany(Favorite::class, 'customer_id', 'id');
+    }
 }
