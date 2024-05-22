@@ -152,7 +152,9 @@ Create table orders
     email varchar(100) NULL,
     phone varchar(100) NULL,
     address varchar(100) NULL,
+    token varchar(50) NULL,
     customer_id int NOT NULL,
+    status tinyint(1) DEFAULT '0',
     created_at date DEFAULT current_timestamp(),
     updated_at date null,
     FOREIGN KEY (customer_id) REFERENCES customers(id)
@@ -163,7 +165,7 @@ Create table order_details
     order_id int NOT NULL,
     product_id int NOT NULL,
     quantity tinyint NOT NULL,
-    price tinyint NOT NULL,
+    price float(10,3) NOT NULL,
     primary key (order_id, product_id),
     FOREIGN KEY (order_id) REFERENCES orders(id),
     FOREIGN KEY (product_id) REFERENCES products(id)
