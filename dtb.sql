@@ -1,8 +1,8 @@
-drop database if exists on_tap;
+drop database if exists ecourses;
 
-Create database on_tap;
+Create database ecourses;
 
-use on_tap;
+use ecourses;
 
 Create table categories
 (
