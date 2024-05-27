@@ -13,8 +13,8 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="banner-content">
-                            <h1 class="title wow fadeInUp" data-wow-delay=".2s">{{ $topBanner->name }}</h1>
-                            <span class="sub-title wow fadeInUp" data-wow-delay=".4s">Butcher & Meat shop</span>
+                            <h1 class="title wow fadeInUp" data-wow-delay=".2s">urcoursé</h1>
+                            <span class="sub-title wow fadeInUp" data-wow-delay=".4s">Ecourse selling website</span>
                             <a href="{{ $topBanner->link }}" class="btn wow fadeInUp" data-wow-delay=".6s">order now</a>
                         </div>
                         <div class="banner-img text-center wow fadeInUp" data-wow-delay=".8s">

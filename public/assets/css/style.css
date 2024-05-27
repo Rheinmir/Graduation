@@ -46,18 +46,19 @@
     --tg-body-font-family: 'Poppins', sans-serif;
     --tg-heading-font-family: 'Paytone One', sans-serif;
     --tg-pacifico-font-family: 'Pacifico', cursive;
-    --tg-primary-color: #df2614;
+    --tg-primary-color: #000000;
     --tg-secondary-color: #1e0e09;
-    --tg-body-font-color: #7f6f6c;
+    --tg-body-font-color: #4CCD99;
     --tg-heading-font-color: #2a1510;
-    --tg-paragraph-color: #7f6f6c;
-    --tg-menu-color: #39301f;
+    --tg-paragraph-color: #4CCD99;
+    --tg-menu-color: #FFFFFF;
+    --tg-menu: #4CCD99;
     --tg-body-font-size: 15px;
     --tg-body-font-weight: 500;
     --tg-heading-font-weight: 400;
     --tg-body-line-height: 2;
     --tg-heading-line-height: 1.2;
-    --tg-blue: #0d6efd;
+    --tg-navyblue: #102C57;
     --tg-indigo: #6610f2;
     --tg-purple: #6f42c1;
     --tg-pink: #d63384;
@@ -480,7 +481,7 @@ label {
 
 /* menu */
 .menu-wrap {
-    background: var(--tg-gray-two);
+    background: var(--tg-menu);
     padding: 0 30px;
     border-radius: 6px;
 }
@@ -707,7 +708,7 @@ label {
 	top: 0;
 	width: 100%;
 	z-index: 99;
-	background: var(--tg-gray-two);
+	background: var(--tg-menu);
 	-webkit-animation: 1000ms ease-in-out 0s normal none 1 running fadeInDown;
 	animation: 1000ms ease-in-out 0s normal none 1 running fadeInDown;
 	-webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
@@ -1480,7 +1481,7 @@ body.search-visible {
     padding-right: 140px;
 }
 .breadcrumb-content::before {
-    content: "\f10e";
+    
     position: absolute;
     right: 0;
     top: 50%;

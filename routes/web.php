@@ -35,7 +35,7 @@ Route::group(['prefix' => 'account'], function() {
 
     Route::get('/login', [AccountController::class, 'login'])->name('account.login');
     Route::get('/logout', [AccountController::class, 'logout'])->name('account.logout');
-    Route::get('/veryfy-account/{email}', [AccountController::class, 'veryfy'])->name('account.veryfy');
+    Route::get('/verify-account/{email}', [AccountController::class, 'verify'])->name('account.verify');
     Route::post('/login', [AccountController::class, 'check_login']);
 
     Route::get('/register', [AccountController::class, 'register'])->name('account.register');
