@@ -131,9 +131,9 @@
                                     </div>
                                     <div class="header-action d-none d-md-block">
                                         <ul class="list-wrap">
-                                            <li class="header-search">
+                                            <!-- <li class="header-search">
                                                 <a href="#"><i class="flaticon-search"></i></a>
-                                            </li>
+                                            </li> -->
                                             <li class="header-shop-cart">
                                                 <a href="{{route('cart.index')}}">
                                                     <i class="flaticon-shopping-basket"></i>
