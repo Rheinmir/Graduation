@@ -90,8 +90,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title text-center mb-60">
-                        <span class="sub-title">Organic Shop</span>
-                        <h2 class="title">Sale Products</h2>
+                        <span class="sub-title">Ecourses</span>
+                        <h2 class="title">Sale Courses</h2>
                         <div class="title-shape" data-background="uploads/images/title_shape.png"></div>
                     </div>
                 </div>
@@ -169,8 +169,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title text-center mb-70">
-                        <span class="sub-title">Organic Shop</span>
-                        <h2 class="title">Fueature Products</h2>
+                        <span class="sub-title">Ecourses</span>
+                        <h2 class="title">Feature Products</h2>
                         <div class="title-shape" data-background="uploads/images/title_shape.png"></div>
                     </div>
                 </div>
@@ -373,86 +373,6 @@
     </section>
     <!-- cta-area-end -->
 
-    <!-- blog-post-area -->
-    <section class="blog-post-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title text-center mb-70">
-                        <span class="sub-title">Latest News</span>
-                        <h2 class="title">Latest News Update</h2>
-                        <div class="title-shape" data-background="uploads/images/title_shape.png"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-6">
-                    <div class="blog-post-item">
-                        <div class="blog-post-thumb">
-                            <a href="blog-details.html"><img src="uploads/blog/blog_post01.jpg" alt=""></a>
-                        </div>
-                        <div class="blog-post-content">
-                            <div class="blog-meta">
-                                <ul class="list-wrap">
-                                    <li><a href="blog.html"><i class="fas fa-user"></i>Hamolin Pilot</a></li>
-                                    <li><i class="fas fa-comments"></i>03</li>
-                                </ul>
-                            </div>
-                            <h4 class="title"><a href="blog-details.html">Hamburg Meat is Animal Flesh Food</a></h4>
-                            <p>Meat provide well shapd fresh and organic meat well animals is Humans.</p>
-                            <div class="blog-post-bottom">
-                                <a href="blog-details.html" class="link-btn">Read More</a>
-                                <a href="blog-details.html" class="link-arrow"><i class="fas fa-angle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="blog-post-item">
-                        <div class="blog-post-thumb">
-                            <a href="blog-details.html"><img src="uploads/blog/blog_post02.jpg" alt=""></a>
-                        </div>
-                        <div class="blog-post-content">
-                            <div class="blog-meta">
-                                <ul class="list-wrap">
-                                    <li><a href="blog.html"><i class="fas fa-user"></i>Hamolin Pilot</a></li>
-                                    <li><i class="fas fa-comments"></i>03</li>
-                                </ul>
-                            </div>
-                            <h4 class="title"><a href="blog-details.html">Good Source of Iron And Flesh Food</a></h4>
-                            <p>Meat provide well shapd fresh and organic meat well animals is Humans.</p>
-                            <div class="blog-post-bottom">
-                                <a href="blog-details.html" class="link-btn">Read More</a>
-                                <a href="blog-details.html" class="link-arrow"><i class="fas fa-angle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="blog-post-item">
-                        <div class="blog-post-thumb">
-                            <a href="blog-details.html"><img src="uploads/blog/blog_post03.jpg" alt=""></a>
-                        </div>
-                        <div class="blog-post-content">
-                            <div class="blog-meta">
-                                <ul class="list-wrap">
-                                    <li><a href="blog.html"><i class="fas fa-user"></i>Hamolin Pilot</a></li>
-                                    <li><i class="fas fa-comments"></i>03</li>
-                                </ul>
-                            </div>
-                            <h4 class="title"><a href="blog-details.html">Chicken Sausage For Sale Humanely Raised</a></h4>
-                            <p>Meat provide well shapd fresh and organic meat well animals is Humans.</p>
-                            <div class="blog-post-bottom">
-                                <a href="blog-details.html" class="link-btn">Read More</a>
-                                <a href="blog-details.html" class="link-arrow"><i class="fas fa-angle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- blog-post-area-end -->
 
 </main>
 <!-- main-area-end -->

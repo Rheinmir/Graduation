@@ -34,7 +34,7 @@
                             <div class="section-title mb-15">
                                 <span class="sub-title">Change your password</span>
                             </div>
-                            <p>Meat provide well shaped fresh and the organic meat well <br> animals is Humans have hunted schistoric</p>
+                            <p>Ecourses allow you to learn at their own pace, fitting their busy schedules for your lifelong learning</p>
                             <form action="" method="POST">
                                 @csrf
                                 <div class="contact-form-wrap">

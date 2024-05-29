@@ -637,8 +637,8 @@ label {
     right: 0;
     top: 100%;
     min-width: 230px;
-    border: 1px solid #d9d9d9;
-    background: var(--tg-gray-two);
+    border: 1px solid var(--tg-primary-color);
+    background: var(--tg-primary-color);
     margin: 0 0;
     transform: scale(1, 0);
     transform-origin: 0 0;
@@ -688,7 +688,7 @@ label {
     width: 0;
     height: 7px;
     border-radius: 50%;
-    background: var(--tg-primary-color);
+    background: var(--tg-white);
     transition: .3s ease-in-out;
 }
 .navbar-wrap ul li .sub-menu > li.active > a::before,

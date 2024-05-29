@@ -58,7 +58,7 @@
                                     </li>
                                     <li>
                                         <i class="fas fa-envelope"></i>
-                                        <a href="mailto:info@example.com">info@example.com</a>
+                                        <a href="mailto:urcoursecontact@gmail.com">urcoursecontact@gmail.com</a>
                                     </li>
                                 </ul>
                             </div>
@@ -100,12 +100,11 @@
                                 <div class="mobile-nav-toggler"><i class="fas fa-bars"></i></div>
                                 <nav class="menu-nav">
                                     <div class="logo">
-                                        <a href="index-2.html"><img src="uploads/logo/logo.png" alt="Logo"></a>
+                                        <a href="{{ route('home.index')}}"><img src="uploads/logo/logo.png" alt="Logo"></a>
                                     </div>
                                     <div class="navbar-wrap main-menu d-none d-lg-flex">
                                         <ul class="navigation">
                                             <li class="active"><a href="{{ route('home.index')}}">Home</a></li>
-                                            <li class=""><a href="about.html">ABOUT US</a></li>
                                             <li class="menu-item-has-children"><a href="#">PRODUCTS</a>
                                                 <ul class="sub-menu">
                                                     @foreach($cats_home as $cath)
@@ -113,20 +112,19 @@
                                                     @endforeach
                                                 </ul>
                                             </li>
-                                            <li class="menu-item-has-children"><a href="#">BLOG</a>
+                                            <!-- <li class="menu-item-has-children"><a href="#">BLOG</a>
                                                 <ul class="sub-menu">
                                                     <li><a href="blog.html">Our Blog</a></li>
                                                     <li><a href="blog-details.html">Blog Details</a></li>
                                                 </ul>
-                                            </li>
+                                            </li> -->
                                             <li class="menu-item-has-children"><a href="#">PAGES</a>
                                                 <ul class="sub-menu">
-                                                    <li><a href="services.html">Services Page</a></li>
-                                                    <li><a href="services-details.html">Services Details</a></li>
-                                                    <li><a href="team-details.html">Team Details</a></li>
+                                                    <li><a href="https://www.youtube.com/channel/UCjGeRFnb5kKX4Rtpxm15zrg">Youtube</a></li>
+                                                    <li><a href="https://github.com/Rheinmir">About Me</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="https://www.linkedin.com/in/b%C3%B9i-ho%C3%A0ng-gia-tr%E1%BA%A7n-1436092a0/?originalSubdomain=vn">Contact</a></li>
                                         </ul>
                                     </div>
                                     <div class="header-action d-none d-md-block">
@@ -158,11 +156,11 @@
                                     </div>
                                     <div class="social-links">
                                         <ul class="clearfix list-wrap">
-                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                            <li><a href="https://www.linkedin.com/in/b%C3%B9i-ho%C3%A0ng-gia-tr%E1%BA%A7n-1436092a0/?originalSubdomain=vn"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="https://www.linkedin.com/in/b%C3%B9i-ho%C3%A0ng-gia-tr%E1%BA%A7n-1436092a0/?originalSubdomain=vn"><i class="fab fa-twitter"></i></a></li>
+                                            <li><a href="https://www.linkedin.com/in/b%C3%B9i-ho%C3%A0ng-gia-tr%E1%BA%A7n-1436092a0/?originalSubdomain=vn"><i class="fab fa-instagram"></i></a></li>
+                                            <li><a href="https://www.linkedin.com/in/b%C3%B9i-ho%C3%A0ng-gia-tr%E1%BA%A7n-1436092a0/?originalSubdomain=vn><i class="fab fa-linkedin-in"></i></a></li>
+                                            <li><a href="https://www.linkedin.com/in/b%C3%B9i-ho%C3%A0ng-gia-tr%E1%BA%A7n-1436092a0/?originalSubdomain=vn"><i class="fab fa-youtube"></i></a></li>
                                         </ul>
                                     </div>
                                 </nav>
