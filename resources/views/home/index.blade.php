@@ -151,7 +151,7 @@
                         <div class="gallery-active">
                             @foreach ($galleries as $ga)
                             <div class="gallery-item">
-                                <a href="uploads/gallery/{{ $ga->image }}" class="popup-image"><img src="uploads/gallery/gallery_img01.png" alt=""></a>
+                                <a href="uploads/gallery/{{ $ga->image }}" class="popup-image"><img src="uploads/gallery/{{ $ga->image }}" alt=""></a>
                             </div>
                             @endforeach
 
@@ -246,8 +246,8 @@
                                     </div>
                                     <div class="team-content">
                                         <div class="line" data-background="uploads/images/line.png"></div>
-                                        <h4 class="title"><a href="team-details.html">Alaxzender pilot</a></h4>
-                                        <span>stack expert</span>
+                                        <h4 class="title"><a href="team-details.html">Ju Yijun</a></h4>
+                                        <span>Human Resource manager</span>
                                     </div>
                                 </div>
                             </div>
@@ -259,8 +259,8 @@
                                     </div>
                                     <div class="team-content">
                                         <div class="line" data-background="uploads/images/line.png"></div>
-                                        <h4 class="title"><a href="team-details.html">Starlee jonson</a></h4>
-                                        <span>stack expert</span>
+                                        <h4 class="title"><a href="team-details.html">Briallen Eluned</a></h4>
+                                        <span>Senior accounting specialist</span>
                                     </div>
                                 </div>
                             </div>
@@ -272,8 +272,8 @@
                                     </div>
                                     <div class="team-content">
                                         <div class="line" data-background="uploads/images/line.png"></div>
-                                        <h4 class="title"><a href="team-details.html">Alaxzender pilot</a></h4>
-                                        <span>stack expert</span>
+                                        <h4 class="title"><a href="team-details.html">Ollie Wilbur</a></h4>
+                                        <span>Senior Software Engineer</span>
                                     </div>
                                 </div>
                             </div>

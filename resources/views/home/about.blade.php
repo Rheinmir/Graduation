@@ -124,8 +124,8 @@
                                 </div>
                                 <div class="team-content">
                                     <div class="line" data-background="uploads/img/images/line.png"></div>
-                                    <h4 class="title"><a href="team-details.html">Alaxzender pilot</a></h4>
-                                    <span>stack expert</span>
+                                    <h4 class="title"><a href="team-details.html">Ju Yijun</a></h4>
+                                    <span>HR manager</span>
                                 </div>
                             </div>
                         </div>
@@ -137,8 +137,8 @@
                                 </div>
                                 <div class="team-content">
                                     <div class="line" data-background="uploads/img/images/line.png"></div>
-                                    <h4 class="title"><a href="team-details.html">Starlee jonson</a></h4>
-                                    <span>stack expert</span>
+                                    <h4 class="title"><a href="team-details.html">Briallen Eluned</a></h4>
+                                    <span>Senior accounting specialist</span>
                                 </div>
                             </div>
                         </div>
@@ -150,8 +150,8 @@
                                 </div>
                                 <div class="team-content">
                                     <div class="line" data-background="uploads/img/images/line.png"></div>
-                                    <h4 class="title"><a href="team-details.html">Alaxzender pilot</a></h4>
-                                    <span>stack expert</span>
+                                    <h4 class="title"><a href="team-details.html">Ollie Wilbur</a></h4>
+                                    <span>Software Engineer</span>
                                 </div>
                             </div>
                         </div>

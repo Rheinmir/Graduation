@@ -54,7 +54,7 @@
                                 <ul class="list-wrap">
                                     <li class="header-location">
                                         <i class="fas fa-map-marker-alt"></i>
-                                        33M Sun Central. New York
+                                        475 Dien Bien Phu. Ho Chi Minh City
                                     </li>
                                     <li>
                                         <i class="fas fa-envelope"></i>
@@ -81,10 +81,10 @@
                                 </div>
                                 <div class="header-top-social">
                                     <ul class="list-wrap">
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li><a href="https://www.linkedin.com/in/b%C3%B9i-ho%C3%A0ng-gia-tr%E1%BA%A7n-1436092a0/?originalSubdomain=vn"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="https://www.linkedin.com/in/b%C3%B9i-ho%C3%A0ng-gia-tr%E1%BA%A7n-1436092a0/?originalSubdomain=vn"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="https://www.linkedin.com/in/b%C3%B9i-ho%C3%A0ng-gia-tr%E1%BA%A7n-1436092a0/?originalSubdomain=vn"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="https://www.linkedin.com/in/b%C3%B9i-ho%C3%A0ng-gia-tr%E1%BA%A7n-1436092a0/?originalSubdomain=vn"><i class="fab fa-linkedin-in"></i></a></li>
                                     </ul>
                                 </div>
                             </div>

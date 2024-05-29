@@ -3343,7 +3343,6 @@ body.search-visible {
     top: 0;
     width: 100%;
     height: 100%;
-    background: #de2312;
     opacity: .80;
     z-index: -1;
 }
@@ -3354,7 +3353,7 @@ body.search-visible {
     top: 0;
     width: 56%;
     height: 100%;
-    background: var(--tg-secondary-color);
+    background: black;
     z-index: -1;
     clip-path: polygon(40% 0, 100% 0, 100% 100%, 0% 100%);
 }
