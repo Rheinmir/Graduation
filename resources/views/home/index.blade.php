@@ -50,10 +50,10 @@
                                         <a title="Yêu thích" href="{{ route('home.favorite', $np->id) }}"><i class="far fa-heart"></i></a>
                                         @endif
 
-                                        <a title="Thêm vòa giỏ hàng" href="{{ route('cart.add', $np->id) }}"><i class="fa fa-shopping-cart"></i></a>
+                                        <a title="Thêm vào giỏ hàng" href="{{ route('cart.add', $np->id) }}"><i class="fa fa-shopping-cart"></i></a>
 
                                     @else
-                                    <a title="Thêm vòa giỏ hàng" href="{{ route('account.login') }}" onclick="alert('vui lòng đăng nhập để thêm giỏ hàng')"><i class="fa fa-shopping-cart"></i></a>
+                                    <a title="Thêm vào giỏ hàng" href="{{ route('account.login') }}" onclick="alert('vui lòng đăng nhập để thêm giỏ hàng')"><i class="fa fa-shopping-cart"></i></a>
 
                                     @endif
                                 </div>
@@ -119,10 +119,10 @@
                                         <a title="Yêu thích" href="{{ route('home.favorite', $sp->id) }}"><i class="far fa-heart"></i></a>
                                         @endif
 
-                                        <a title="Thêm vòa giỏ hàng" href="{{ route('cart.add', $sp->id) }}"><i class="fa fa-shopping-cart"></i></a>
+                                        <a title="Thêm vào giỏ hàng" href="{{ route('cart.add', $sp->id) }}"><i class="fa fa-shopping-cart"></i></a>
 
                                     @else
-                                    <a title="Thêm vòa giỏ hàng" href="{{ route('account.login') }}" onclick="alert('vui lòng đăng nhập để thêm giỏ hàng')"><i class="fa fa-shopping-cart"></i></a>
+                                    <a title="Thêm vào giỏ hàng" href="{{ route('account.login') }}" onclick="alert('vui lòng đăng nhập để thêm giỏ hàng')"><i class="fa fa-shopping-cart"></i></a>
 
                                     @endif
                         </div>
@@ -193,10 +193,10 @@
                                         <a title="Yêu thích" href="{{ route('home.favorite', $fp->id) }}"><i class="far fa-heart"></i></a>
                                         @endif
 
-                                        <a title="Thêm vòa giỏ hàng" href="{{ route('cart.add', $fp->id) }}"><i class="fa fa-shopping-cart"></i></a>
+                                        <a title="Thêm vào giỏ hàng" href="{{ route('cart.add', $fp->id) }}"><i class="fa fa-shopping-cart"></i></a>
 
                                     @else
-                                    <a title="Thêm vòa giỏ hàng" href="{{ route('account.login') }}" onclick="alert('vui lòng đăng nhập để thêm giỏ hàng')"><i class="fa fa-shopping-cart"></i></a>
+                                    <a title="Thêm vào giỏ hàng" href="{{ route('account.login') }}" onclick="alert('vui lòng đăng nhập để thêm giỏ hàng')"><i class="fa fa-shopping-cart"></i></a>
 
                                     @endif
                             </div>
