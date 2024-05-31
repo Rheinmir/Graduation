@@ -197,11 +197,7 @@ INSERT INTO categories(name, status) VALUES
 ('Chuối tiến vua', 1) ,
 ('Nho mỹ', 1);
 
-INSERT INTO `products` (`name`, `image`, `price`, `sale_price`, `category_id`, `description`, `status`, `created_at`, `updated_at`) VALUES
-('Product 1', 'TdBYSppJ7t4hlK8b79FjDtXhOKRvdusqKcnqxLwL.png', 500000.00, 250000.00, 2, 'sasas', 1, '2023-12-06', '2023-12-06');
+INSERT INTO `products` (`id`, `name`, `image`, `price`, `sale_price`, `category_id`, `description`, `status`, `created_at`, `updated_at`) VALUES (NULL, 'CHATGPT FULL COURSE', '9QGutOkZbvROsN0AH7Eis3c1WZUb71B2RCAgHbiV.png', '180', '169', '2', 'CHATGPT FULL COURSE description', '1', current_timestamp(), NULL);
+INSERT INTO `products` (`id`, `name`, `image`, `price`, `sale_price`, `category_id`, `description`, `status`, `created_at`, `updated_at`) VALUES (NULL, 'ReactJS Fullcourse', 'H1aVf66MQWVqNcD4hfabERPKaVDEqD4OgCR2CW8n.png', '200', '189', '1', 'ReactJS Fullcourse description', '1', current_timestamp(), NULL);
 
-INSERT INTO `product_images` (`id`, `image`, `product_id`, `status`, `created_at`, `updated_at`) VALUES
-(17, 'mrppO4Xk0YexKFRgwtJJdKGJm9naIJ0DryeDth4z.png', 1, 0, '2023-12-06', '2023-12-06'),
-(18, 'pXLHEmW0mvjohEMtaD7NK8CET50RskXehfOgG8em.png', 1, 0, '2023-12-06', '2023-12-06'),
-(19, 'rb8sk4CthFqNmyrdEE2bvBU8OOeWelxpuGcq1Coa.png', 1, 0, '2023-12-06', '2023-12-06'),
-(20, 'lP4RQq0nehFTxGrnI0mVMJJOBKqlh2ziyt21m4Hd.png', 1, 0, '2023-12-06', '2023-12-06');
+INSERT INTO `products` (`id`, `name`, `image`, `price`, `sale_price`, `category_id`, `description`, `status`, `created_at`, `updated_at`) VALUES (NULL, 'Excel Fullcourse', 's31Lw4BAlQ9ziI3zw4P1VIYYQ7nU4brn67y0MHCK.png', '250', '209', '1', 'Excel Fullcourse', '1', current_timestamp(), NULL);
