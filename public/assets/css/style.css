@@ -49,7 +49,7 @@
     --tg-primary-color: #000000;
     --tg-secondary-color: #1e0e09;
     --tg-body-font-color: #4CCD99;
-    --tg-heading-font-color: #2a1510;
+    --tg-heading-font-color: #100202;
     --tg-paragraph-color: #4CCD99;
     --tg-menu-color: #FFFFFF;
     --tg-menu: #4CCD99;
@@ -82,6 +82,10 @@
     --pinterest: #3b5998;
     --youtube: #c4302b;
     --skype: #00aff0;
+}
+
+.contact-copyright{
+    color: var(--tg-white);
 }
 body {
 	font-family: var(--tg-body-font-family);
@@ -1986,18 +1990,7 @@ body.search-visible {
     text-align: right;
     position: relative;
 }
-.features-img::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 204px;
-    height: 204px;
-    border-radius: 50%;
-    background: #e7e0d2;
-    z-index: -1;
-}
+
 .features-shape {
     position: absolute;
     right: -15px;
@@ -3670,17 +3663,7 @@ body.search-visible {
     margin-right: 70px;
     padding-bottom: 125px;
 }
-.faq-img-wrap::before {
-    content: "";
-    position: absolute;
-    left: 34%;
-    bottom: 26%;
-    width: 166px;
-    height: 286px;
-    background: var(--tg-white);
-    border-radius: 8px 0 0 0;
-    box-shadow: 0px 3px 37.2px 2.8px rgba(29, 13, 10, 0.41);
-}
+
 .faq-img-wrap img:not(:nth-child(1)) {
     position: absolute;
 }
@@ -4694,14 +4677,14 @@ body.search-visible {
 	21. Footer
 ===============================*/
 .footer-area {
-    background: var(--tg-brown);
+    background: var(--tg-primary-color);
 }
 .footer-logo-area {
-    background: var(--tg-secondary-color);
+    background: var(--tg-primary-color);
     overflow: hidden;
 }
 .footer-logo-wrap {
-    border-bottom: 1px solid #562e1f;
+    border-bottom: 1px solid #605e5e;
 }
 .footer-logo-wrap > .list-wrap {
     display: flex;
@@ -4862,7 +4845,7 @@ body.search-visible {
     gap: 10px;
 }
 .footer-bottom {
-    background: var(--tg-secondary-color);
+    background: var(--tg-primary-color);
     padding: 24px 0;
 }
 .copyright-text p {

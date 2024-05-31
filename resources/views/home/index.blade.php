@@ -85,14 +85,14 @@
     <!-- area-bg-end -->
 
     <!-- product-area -->
-    <section class="product-area product-bg" data-background="uploads/bg/product_bg01.jpg">
+    <section class="product-area product-bg" data-background="">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title text-center mb-60">
                         <span class="sub-title">Ecourses</span>
                         <h2 class="title">Sale Courses</h2>
-                        <div class="title-shape" data-background="uploads/images/title_shape.png"></div>
+                        <div class="title-shape" data-background=""></div>
                     </div>
                 </div>
             </div>
@@ -171,7 +171,7 @@
                     <div class="section-title text-center mb-70">
                         <span class="sub-title">Ecourses</span>
                         <h2 class="title">Feature Products</h2>
-                        <div class="title-shape" data-background="uploads/images/title_shape.png"></div>
+                        <div class="title-shape" data-background=""></div>
                     </div>
                 </div>
             </div>
@@ -207,7 +207,6 @@
                                 @else
                                 <span class="price">${{number_format($fp->price)}}</span>
                                 @endif
-                                <a href="#" class="tag">Garden</a>
                             </div>
                         </div>
                     </div>
@@ -286,14 +285,12 @@
     <!-- team-area-end -->
 
     <!-- faq-area -->
-    <section class="faq-area tg-motion-effects faq-bg" data-background="uploads/bg/faq_bg.jpg">
+    <section class="faq-area tg-motion-effects faq-bg" data-background="">
         <div class="container">
             <div class="row align-items-center justify-content-center">
                 <div class="col-lg-6 col-md-10">
                     <div class="faq-img-wrap">
                         <img src="uploads/images/faq_img01.png" alt="">
-                        <img src="uploads/images/faq_img02.png" alt="">
-                        <img src="uploads/images/faq_img03.png" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -307,36 +304,36 @@
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            hamburg Meat is animal flesh food.
+                                            What is an online course?
                                         </button>
                                     </h2>
                                     <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            <p>Meat provide well shaped fresh and the organic meat well animals is Humans have hunted schistoric times</p>
+                                            <p>An online course is a program of study that is delivered and accessed via the internet. These courses can be taken from anywhere with an internet connection and often include video lectures, readings, assignments, and interactive forums.</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                            Revolution allowed the of animals
+                                            Are online courses as effective as traditional in-person courses?
                                         </button>
                                     </h2>
                                     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            <p>Meat provide well shaped fresh and the organic meat well animals is Humans have hunted schistoric times</p>
+                                            <p>Yes, online courses can be as effective as traditional courses. Their effectiveness often depends on the course design, the instructor’s engagement, and the student’s motivation and discipline.</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                            Meat is animal flesh food.
+                                        What kind of support is available to online students?
                                         </button>
                                     </h2>
                                     <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            <p>Meat provide well shaped fresh and the organic meat well animals is Humans have hunted schistoric times</p>
+                                            <p>Support may include access to instructors via email or discussion forums, technical support for using the LMS, and academic resources like libraries or tutoring services.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -348,7 +345,6 @@
         </div>
         <div class="faq-shape-wrap">
             <img src="uploads/images/faq_shape01.png" alt="" class="tg-motion-effects3">
-            <img src="uploads/images/faq_shape02.png" alt="" class="tg-motion-effects2">
         </div>
     </section>
     <!-- faq-area-end -->
@@ -364,7 +360,7 @@
                         <h2 class="title">Get a Free Quote</h2>
                         <div class="cta-bottom">
                             <a href="shop.html" class="btn">buy now</a>
-                            <a href="tel:0123456789" class="btn call-btn"><i class="fas fa-headphones-alt"></i>make a call</a>
+                            <a href="tel:0797042389" class="btn call-btn"><i class="fas fa-headphones-alt"></i>make a call</a>
                         </div>
                     </div>
                 </div>

@@ -151,7 +151,7 @@
                     <div class="section-title text-center mb-50">
                         <span class="sub-title">Organic Shop</span>
                         <h2 class="title">Related Products</h2>
-                        <div class="title-shape" data-background="uploads/images/title_shape.png"></div>
+                        <div class="title-shape" data-background=""></div>
                     </div>
                 </div>
             </div>

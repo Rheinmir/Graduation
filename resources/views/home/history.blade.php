@@ -43,7 +43,7 @@
                         <tr>
                             <td scope="row">{{ $loop->index + 1 }}</td>
                             <td>{{ $item->created_at->format('d/m/Y') }}</td>
-                            <td>{
+                            <td>
                                 @if ($item->status == 0)
                                 <span>Chưa xác nhận</span>
                                 @elseif ($item->status == 1)

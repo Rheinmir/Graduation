@@ -138,7 +138,7 @@
                                                     <span>{{$carts->sum('quantity')}}</span>
                                                 </a>
                                             </li>
-                                            <li class="header-btn"><a href="tel:0123456789" class="btn">+1 333 555 999</a></li>
+                                            <li class="header-btn"><a href="tel:0797042389" class="btn">+1 123 456 789</a></li>
                                         </ul>
                                     </div>
                                 </nav>
@@ -202,54 +202,22 @@
         <!-- footer-area -->
         <footer>
             <div class="footer-area">
-                <div class="footer-logo-area">
-                    <div class="container">
-                        <div class="footer-logo-wrap">
-                            <ul class="list-wrap">
-                                <li class="order-0 order-lg-2">
-                                    <div class="footer-logo">
-                                        <a href="index-2.html"><img src="assets/img/logo/w_logo.png" alt=""></a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="footer-social">
-                                        <ul class="list-wrap">
-                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="order-lg-3">
-                                    <div class="footer-newsletter">
-                                        <h4 class="title">Our Newsletter</h4>
-                                        <form action="#">
-                                            <input type="email" placeholder="Enter your email...">
-                                            <button type="submit">subscribe</button>
-                                        </form>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
                 <div class="footer-top">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <div class="footer-widget">
-                                    <h4 class="fw-title">about andspa</h4>
+                                    <h4 class="fw-title">about urcourse</h4>
                                     <div class="footer-contact">
                                         <ul class="list-wrap">
-                                            <li>Centerl Park West La, New York</li>
-                                            <li><a href="tel:0123456789">+0 333 999 8899</a></li>
-                                            <li><a href="mailto:info@bemet.com">info@bemet.com</a></li>
+                                            <li>475 Dien Bien Phu. Ho Chi Minh City</li>
+                                            <li><a href="tel:0797042389">+0 123456789</a></li>
+                                            <li><a href="mailto:urcoursecontact@gmail.com">urcoursecontact@gmail.com</a></li>
                                         </ul>
                                     </div>
                                     <div class="footer-content">
                                         <h4 class="title">Open Hours</h4>
-                                        <p>Sunday to Friday <span>06:00-18:00</span></p>
+                                        <p>Monday to Saturday: <span>11:00-23:00</span></p>
                                     </div>
                                 </div>
                             </div>
@@ -258,46 +226,19 @@
                                     <h4 class="fw-title">Important Links</h4>
                                     <div class="footer-link">
                                         <ul class="list-wrap">
-                                            <li><a href="contact.html">CURATION</a></li>
-                                            <li><a href="about.html">ABOUT US</a></li>
-                                            <li><a href="contact.html">MY ACCOUNT</a></li>
-                                            <li><a href="contact.html">CONTACT</a></li>
-                                            <li><a href="contact.html">SHIPPING & RETURNS</a></li>
+                                            <li><a href="https://github.com/Rheinmir">ABOUT US</a></li>
+                                            <li><a href="https://www.linkedin.com/in/b%C3%B9i-ho%C3%A0ng-gia-tr%E1%BA%A7n-1436092a0/?originalSubdomain=vn">MY ACCOUNT</a></li>
+                                            <li><a href="mailto:urcoursecontact@gmail.com">CONTACT</a></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-2 col-md-6 col-sm-4">
                                 <div class="footer-widget">
-                                    <h4 class="fw-title">CATEGORIES</h4>
-                                    <div class="footer-link">
-                                        <ul class="list-wrap">
-                                            <li><a href="contact.html">How to Order</a></li>
-                                            <li><a href="contact.html">Delivery Info</a></li>
-                                            <li><a href="contact.html">FAQs</a></li>
-                                            <li><a href="contact.html">Terms</a></li>
-                                            <li><a href="contact.html">Privacy Policy</a></li>
-                                        </ul>
-                                    </div>
+                                    
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 col-sm-8">
-                                <div class="footer-widget">
-                                    <h4 class="fw-title">instagram</h4>
-                                    <div class="footer-instagram">
-                                        <ul class="list-wrap">
-                                            <li><a href="#"><img src="assets/img/images/footer_insta01.jpg" alt=""></a></li>
-                                            <li><a href="#"><img src="assets/img/images/footer_insta02.jpg" alt=""></a></li>
-                                            <li><a href="#"><img src="assets/img/images/footer_insta03.jpg" alt=""></a></li>
-                                            <li><a href="#"><img src="assets/img/images/footer_insta04.jpg" alt=""></a></li>
-                                            <li><a href="#"><img src="assets/img/images/footer_insta05.jpg" alt=""></a></li>
-                                            <li><a href="#"><img src="assets/img/images/footer_insta06.jpg" alt=""></a></li>
-                                            <li><a href="#"><img src="assets/img/images/footer_insta07.jpg" alt=""></a></li>
-                                            <li><a href="#"><img src="assets/img/images/footer_insta08.jpg" alt=""></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -306,7 +247,7 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-7">
                                 <div class="copyright-text">
-                                    <p>© 2023 By <a href="index-2.html">Bemet</a>, All Rights Reserved</p>
+                                    <p>© 2024 By <a class="contact-copyright"href="https://github.com/Rheinmir">Hoang Gia</a></p>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-5">
