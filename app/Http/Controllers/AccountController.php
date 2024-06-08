@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Mail\ForgotPassword;
 use App\Mail\VerifyAccount;
 use App\Models\Customer;
+use App\Models\Schedule;
+use App\Models\ScheduleUser;
 use App\Models\CustomerResetToken;
 use Illuminate\Contracts\Mail\Mailer;
 use Illuminate\Http\Request;
@@ -189,6 +191,74 @@ class AccountController extends Controller
         }
 
         return redirect()->back()->with('no','Something error, please check agian');
+
+    }
+
+    public function schedule()
+    {
+        $user = auth('cus')->user();
+
+        $schedules = Schedule::with(['users' => function ($query) use ($user) {
+            $query->where('user_id', $user->id);
+        }])->orderByDesc('id')->paginate(15);
+
+        return view('account.schedule', compact('schedules', 'user'));
+    }
+
+    public function scheduleUser($id)
+    {
+        $schedule = Schedule::find($id);
+
+        if (!$schedule) {
+            return redirect()->back()->with('error', 'Dữ liệu không tồn tại');
+        }
+
+        $schedule_users = ScheduleUser::with(['user', 'schedule'])->where('schedule_id', $id)->get();
+        $user = auth('cus')->user();
+        $status = ScheduleUser::STATUS;
+        return view('account.schedule_user', compact('schedule_users', 'user', 'schedule', 'status'));
+    }
+
+    public function scheduleUserDetail($id)
+    {
+        $schedule = Schedule::find($id);
+
+        if (!$schedule) {
+            return redirect()->back()->with('error', 'Dữ liệu không tồn tại');
+        }
+
+        $user = auth('cus')->user();
+
+        $schedule_user = ScheduleUser::where(['user_id' => $user->id, 'schedule_id' => $schedule->id])->first();
+
+        return view('account.schedule_detail', compact('schedule', 'user', 'schedule_user'));
+    }
+
+    public function registerSchedule($id)
+    {
+        $schedule = Schedule::find($id);
+
+        if (!$schedule) {
+            return redirect()->back()->with('error', 'Dữ liệu không tồn tại');
+        }
+
+        $user = auth('cus')->user();
+
+        $schedule_user = ScheduleUser::where(['user_id' => $user->id, 'schedule_id' => $schedule->id])->first();
+
+        if ($schedule_user) {
+            return redirect()->route('account.schedule')->with('no','Bạn đã đăng ký');
+        }
+
+        $data = [
+            'user_id' => $user->id,
+            'schedule_id' => $schedule->id,
+            'status' => 1,
+        ];
+
+        ScheduleUser::create($data);
+
+        return redirect()->route('account.schedule')->with('ok','Đăng ký thành công lịch hẹn.');
 
     }
 }

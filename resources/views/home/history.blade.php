@@ -48,7 +48,7 @@
                                 <span>Chưa xác nhận</span>
                                 @elseif ($item->status == 1)
                                 <span>Đã xác nhận</span>
-                                @elseif ($item->status == 21)
+                                @elseif ($item->status == 2)
                                 <span>Đã thanh toán</span>
                                 @else
                                 <span>Đã Hủy</span>

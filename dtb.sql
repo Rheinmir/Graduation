@@ -170,6 +170,61 @@ Create table order_details
     FOREIGN KEY (order_id) REFERENCES orders(id),
     FOREIGN KEY (product_id) REFERENCES products(id)
 );
+CREATE TABLE `migrations` (
+  `id` int UNSIGNED NOT NULL,
+  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `batch` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `migrations`
+--
+
+INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
+(2, '2024_06_01_075429_create_schedules_table', 1);
+CREATE TABLE `schedules` (
+  `id` bigint UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Tiêu đề lịch hẹn',
+  `schedule_date` date DEFAULT NULL COMMENT 'ngày lịch hẹn',
+  `contents` text COLLATE utf8mb4_unicode_ci COMMENT 'Nội dung lịch hẹn',
+  `status` tinyint DEFAULT NULL COMMENT 'Trạng thái lịch hẹn',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `schedules`
+--
+
+INSERT INTO `schedules` (`id`, `title`, `schedule_date`, `contents`, `status`, `created_at`, `updated_at`) VALUES
+(2, 'Lịch hẹn ngày nào', '2024-06-12', '<p>Lịch hẹn ngày nào  ádasdasd</p>', 2, '2024-06-01 02:14:39', '2024-06-01 02:20:11'),
+(3, 'lịch hẹn ngày 1444', '2024-06-19', '<p>lịch hẹn ngày 1444<br></p>', 1, '2024-06-01 02:19:32', '2024-06-01 02:19:32'),
+(4, 'Hẹn họp ngày 02/06', '2024-06-02', '<p>Mô tả về ngày hẹn gì dsfdsfsdf</p><p><br></p><p><br></p>', 1, '2024-06-01 02:48:28', '2024-06-01 02:48:38');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `schedule_users`
+--
+
+CREATE TABLE `schedule_users` (
+  `id` bigint UNSIGNED NOT NULL,
+  `user_id` int UNSIGNED NOT NULL COMMENT 'id người dùng',
+  `schedule_id` int UNSIGNED NOT NULL COMMENT 'id lịch hẹn',
+  `status` tinyint DEFAULT NULL COMMENT 'Trạng thái đăng ký lịch hẹn',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `schedule_users`
+--
+
+INSERT INTO `schedule_users` (`id`, `user_id`, `schedule_id`, `status`, `created_at`, `updated_at`) VALUES
+(1, 1, 2, 1, '2024-06-01 09:44:29', '2024-06-01 09:44:29'),
+(2, 1, 3, 1, '2024-06-01 09:44:52', '2024-06-01 09:44:52');
+
+-- --------------------------------------------------------
 
 INSERT INTO banners(name, image, link, status) VALUES
 ('Banner 1', 'banner_bg.png', '#', 1) ;
@@ -182,10 +237,6 @@ INSERT INTO banners(name, image, position, status) VALUES
 INSERT INTO banners(name, status, link, description, position, priority, image) VALUES
 ('Fresh Meat',1, '#','','top-banner',0,'banner_bg.png') ;
 
-INSERT INTO banners(name, status, link, description, position, priority, image) VALUES
-('gallery 1',1, '#','','gallery',1,'gallery_img01.png') ;
-('gallery 2',1, '#','','gallery',2,'gallery_img02.png') ;
-('gallery 3',1, '#','','gallery',3,'gallery_img03.png') ;
 
 
 INSERT INTO `users` (`name`, `email`, `password`, `created_at`, `updated_at`) VALUES

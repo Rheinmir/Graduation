@@ -105,7 +105,24 @@
             </ul>
           </li>
 
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-th"></i> <span>Lịch hẹn</span> <i class="fa fa-angle-left pull-right"></i>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="{{ route('schedule.index') }}"><i class="fa fa-circle-o"></i> Danh sách</a></li>
+              <li><a href="{{ route('schedule.create') }}"><i class="fa fa-circle-o"></i> Thêm mới</a></li>
+            </ul>
+          </li>
 
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-th"></i> <span>Danh sách đăng ký</span> <i class="fa fa-angle-left pull-right"></i>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="{{ route('schedule.user.index') }}"><i class="fa fa-circle-o"></i> Danh sách</a></li>
+            </ul>
+          </li>
 
         </ul>
       </section>

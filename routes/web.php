@@ -6,6 +6,8 @@ use App\Http\Controllers\AccountController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\ScheduleController;
+use App\Http\Controllers\Admin\ScheduleUserController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\OrderController;
@@ -48,6 +50,12 @@ Route::group(['prefix' => 'account'], function() {
 
         Route::get('/change-password', [AccountController::class, 'change_password'])->name('account.change_password');
         Route::post('/change-password', [AccountController::class, 'check_change_password']);
+
+        Route::get('/schedule', [AccountController::class, 'schedule'])->name('account.schedule');
+        Route::get('/schedule/user/{id}', [AccountController::class, 'scheduleUser'])->name('account.schedule.user');
+        Route::get('/schedule/user/detail/{id}', [AccountController::class, 'scheduleUserDetail'])->name('account.schedule.user.detail');
+
+        Route::get('/register/schedule/{id}', [AccountController::class, 'registerSchedule'])->name('register.schedule');
     });
 
     Route::get('/forgot-password', [AccountController::class, 'forgot_password'])->name('account.forgot_password');
@@ -92,6 +100,26 @@ Route::group(['prefix' => 'admin','middleware'=>'auth'], function() {
     Route::resource('category', CategoryController::class);
     Route::resource('product', ProductController::class);
     Route::get('product-delete-image/{image}', [ProductController::class,'destroyImage'])->name('product.destroyImage');
+
+    Route::group(['prefix' => 'schedule'], function(){
+        Route::get('/', [ScheduleController::class, 'index'])->name('schedule.index');
+        Route::get('/create', [ScheduleController::class, 'create'])->name('schedule.create');
+        Route::post('/create',[ScheduleController::class, 'store']);
+
+        Route::get('/update/{id}',[ScheduleController::class, 'edit'])->name('schedule.update');
+        Route::post('/update/{id}',[ScheduleController::class, 'update']);
+
+        Route::delete('/delete/{id}',[ScheduleController::class, 'delete'])->name('schedule.delete');
+    });
+
+    Route::group(['prefix' => 'schedule-user'], function(){
+        Route::get('/', [ScheduleUserController::class, 'index'])->name('schedule.user.index');
+
+        Route::get('/update/{id}',[ScheduleUserController::class, 'edit'])->name('schedule.user.update');
+        Route::post('/update/{id}',[ScheduleUserController::class, 'update']);
+
+        Route::delete('/delete/{id}',[ScheduleUserController::class, 'delete'])->name('schedule.user.delete');
+    });
 });
 
 
