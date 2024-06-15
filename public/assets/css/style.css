@@ -83,7 +83,9 @@
     --youtube: #c4302b;
     --skype: #00aff0;
 }
-
+.ifor {
+    padding-top: 10px;
+}
 .contact-copyright{
     color: var(--tg-white);
 }

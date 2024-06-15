@@ -59,7 +59,7 @@ class CheckoutController extends Controller
             return redirect()->route('home.index')->with('ok','Order checkout successfully');
         }
 
-        return redirect()->route('home.index')->with('no','Something orror, please try again');
+        return redirect()->route('home.index')->with('no','Something error, please try again');
 
     }
 

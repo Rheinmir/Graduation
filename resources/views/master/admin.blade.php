@@ -22,9 +22,9 @@
       <!-- Logo -->
       <a href="ad_assets/index2.html" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>A</b>LT</span>
+        <span class="logo-mini"><b>A</b>DM</span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>Admin</b>LTE</span>
+        <span class="logo-lg"><b>Admin</b></span>
       </a>
       <!-- Header Navbar: style can be found in header.less -->
       <nav class="navbar navbar-static-top">
@@ -69,7 +69,7 @@
         <ul class="sidebar-menu">
           <li>
             <a href="">
-              <i class="fa fa-home"></i> <span>Dashboard</span>
+              <i class="fa fa-home"></i> <span>Landing Page</span>
             </a>
           </li>
 
@@ -99,28 +99,28 @@
             </a>
             <ul class="treeview-menu">
               <li><a href="{{ route('order.index') }}"><i class="fa fa-circle-o"></i> List</a></li>
-              <li><a href="{{ route('order.index') }}?status=0"><i class="fa fa-circle-o"></i> Chờ xác nhận</a></li>
-              <li><a href="{{ route('order.index') }}?status=2"><i class="fa fa-circle-o"></i> Đã giao hàng</a></li>
-              <li><a href="{{ route('order.index') }}?status=3"><i class="fa fa-circle-o"></i> Đã hủy</a></li>
+              <li><a href="{{ route('order.index') }}?status=0"><i class="fa fa-circle-o"></i> Pending</a></li>
+              <li><a href="{{ route('order.index') }}?status=2"><i class="fa fa-circle-o"></i> Completed</a></li>
+              <li><a href="{{ route('order.index') }}?status=3"><i class="fa fa-circle-o"></i> Canceled</a></li>
             </ul>
           </li>
 
           <li class="treeview">
             <a href="#">
-              <i class="fa fa-th"></i> <span>Lịch hẹn</span> <i class="fa fa-angle-left pull-right"></i>
+              <i class="fa fa-th"></i> <span>Schedule</span> <i class="fa fa-angle-left pull-right"></i>
             </a>
             <ul class="treeview-menu">
-              <li><a href="{{ route('schedule.index') }}"><i class="fa fa-circle-o"></i> Danh sách</a></li>
-              <li><a href="{{ route('schedule.create') }}"><i class="fa fa-circle-o"></i> Thêm mới</a></li>
+              <li><a href="{{ route('schedule.index') }}"><i class="fa fa-circle-o"></i> List</a></li>
+              <li><a href="{{ route('schedule.create') }}"><i class="fa fa-circle-o"></i> Add</a></li>
             </ul>
           </li>
 
           <li class="treeview">
             <a href="#">
-              <i class="fa fa-th"></i> <span>Danh sách đăng ký</span> <i class="fa fa-angle-left pull-right"></i>
+              <i class="fa fa-th"></i> <span>Request List</span> <i class="fa fa-angle-left pull-right"></i>
             </a>
             <ul class="treeview-menu">
-              <li><a href="{{ route('schedule.user.index') }}"><i class="fa fa-circle-o"></i> Danh sách</a></li>
+              <li><a href="{{ route('schedule.user.index') }}"><i class="fa fa-circle-o"></i>   List</a></li>
             </ul>
           </li>
 
@@ -163,7 +163,7 @@
           </div>
           <!-- /.box-body -->
           <div class="box-footer">
-            Footer
+            
           </div>
           <!-- /.box-footer-->
         </div>
@@ -176,9 +176,8 @@
 
     <footer class="main-footer">
       <div class="pull-right hidden-xs">
-        <b>Version</b> 2.3.3
       </div>
-      <strong>Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
+      <strong>Copyright &copy; 2024 <a href="https://github.com/Rheinmir">Hoang Gia</a>.</strong> All rights
       reserved.
     </footer>
   </div>

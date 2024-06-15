@@ -65,7 +65,6 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                             </div>
-                            <span>(4 customer reviews)</span>
                         </div>
                         <h3 class="price">${{ number_format($product->price) }} <span>- {{ $product->status == 1 ? 'In stock' : 'Out stock' }}</span></h3>
                         <!-- <div class="product-count-wrap">

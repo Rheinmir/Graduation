@@ -1,5 +1,5 @@
 @extends('master.admin')
-@section('title', 'Lịch hẹn')
+@section('title', 'Schedule')
 @section('main')
 
     <!-- Main content -->

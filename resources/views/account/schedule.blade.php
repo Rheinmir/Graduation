@@ -9,11 +9,11 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="breadcrumb-content">
-                            <h2 class="title">Danh sách lịch hẹn</h2>
+                            <h2 class="title">Schedule</h2>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="{{ route('home.index') }}">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Danh sách lịch hẹn</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Schedule</li>
                                 </ol>
                             </nav>
                         </div>
@@ -32,10 +32,10 @@
                         <div class="col-lg-9">
                             <div class="contact-content">
                                 <div class="section-title mb-15">
-                                    <span class="sub-title">Đăng ký lịch hẹn</span>
-                                    <h2 class="title">Danh sách lịch hẹn</h2>
+                                    <span class="sub-title">Request meeting</span>
+                                    <h2 class="title">Schedule</h2>
                                 </div>
-                                <p>Đăng ký lịch hẹn</p>
+                                <p>Request to attend a meeting/class session to ask questions about issues you do not understand clearly in the course </p>
 
                                 @if (Session::has('no') && ($message = Session::get('no')))
                                     <div class="alert alert-danger" role="alert">
@@ -51,11 +51,11 @@
                                 <table class="table table-bordered">
                                     <thead>
                                     <tr>
-                                        <th scope="col">STT</th>
-                                        <th scope="col">Tiêu đề</th>
-                                        <th scope="col">Ngày hẹn</th>
-                                        <th scope="col">Trạng thái</th>
-                                        <th scope="col" class="text-center">Hành động</th>
+                                        <th scope="col">No.</th>
+                                        <th scope="col">Title</th>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col" class="text-center">Request</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -70,24 +70,24 @@
                                                         @foreach($schedule->users as $schedule_user)
                                                             @if ($schedule_user->user_id == $user->id)
                                                                 @if ($schedule_user->status == 2)
-                                                                    Đã xác nhận
+                                                                    Approved
                                                                 @else
-                                                                    Đã đăng ký
+                                                                    Requested
                                                                 @endif
                                                             @else
-                                                                Chưa đăng ký
+                                                                Active
                                                             @endif
                                                         @endforeach
                                                     @else
-                                                        Chưa đăng ký
+                                                        Active
                                                     @endif
                                                 @else
-                                                    Chưa đăng ký
+                                                    Active
                                                 @endif
                                             </td>
                                             <td class="text-center">
-                                                <a href="{{ route('account.schedule.user', $schedule->id) }}" title="Danh sách"><i class="fa fa-list" aria-hidden="true"></i></a>
-                                                <a href="{{ route('account.schedule.user.detail', $schedule->id) }}" title="Đăng ký"><i class="fa fa-save" aria-hidden="true"></i></a>
+                                                <a href="{{ route('account.schedule.user', $schedule->id) }}" title="List"><i class="fa fa-list" aria-hidden="true"></i></a>
+                                                <a href="{{ route('account.schedule.user.detail', $schedule->id) }}" title="Request"><i class="fa fa-save" aria-hidden="true"></i></a>
                                             </td>
                                         </tr>
                                         @endforeach

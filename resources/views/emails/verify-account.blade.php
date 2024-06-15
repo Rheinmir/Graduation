@@ -1,7 +1,7 @@
 <h3>Hi {{ $account->name }}</h3>
 
 <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. At facilis amet quo, dolor ipsa doloremque accusamus incidunt laborum reprehenderit consequuntur nesciunt quod aliquid, debitis veritatis perspiciatis ipsum labore animi excepturi.
+    This is your verify mail!.
 </p>
 
 <p>

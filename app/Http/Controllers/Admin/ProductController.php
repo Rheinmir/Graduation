@@ -144,7 +144,7 @@ class ProductController extends Controller
                     ]);
                 }
             }
-            return redirect()->route('product.index')->with('ok','UIpdate the product successffuly');
+            return redirect()->route('product.index')->with('ok','Update the product successffuly');
         }
 
         return redirect()->back()->with('no','Something error, Please try again');

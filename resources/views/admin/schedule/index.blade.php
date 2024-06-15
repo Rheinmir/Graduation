@@ -1,18 +1,18 @@
 @extends('master.admin')
-@section('title', 'Lịch hẹn')
+@section('title', 'Schedule')
 @section('main')
 
     <form action="" method="GET" class="form-inline" role="form">
 
         <div class="form-group">
             <label class="sr-only" for="">label</label>
-            <input type="text" class="form-control" name="title" id="" placeholder="Tiêu đề lịch hẹn">
+            <input type="text" class="form-control" name="title" id="" placeholder="">
         </div>
 
 
 
         <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
-        <a href="{{ route('schedule.create') }}" class="btn btn-success pull-right"><i class="fa fa-plus"></i> Thêm mới</a>
+        <a href="{{ route('schedule.create') }}" class="btn btn-success pull-right"><i class="fa fa-plus"></i> Add new</a>
     </form>
 
 
@@ -21,11 +21,11 @@
     <table class="table table-hover">
         <thead>
         <tr>
-            <th class=" text-center">STT</th>
-            <th>Tiêu đề lịch hẹn</th>
-            <th>Ngày hẹn</th>
-            <th>Trạng thái</th>
-            <th class=" text-center">Hành động</th>
+            <th class=" text-center">No.</th>
+            <th>Title</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th class=" text-center">Edit/Delete</th>
         </tr>
         </thead>
         <tbody>

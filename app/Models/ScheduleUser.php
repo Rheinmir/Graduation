@@ -21,8 +21,8 @@ class ScheduleUser extends Model
     ];
 
     const STATUS = [
-        1 => 'Chờ xác nhận',
-        2 => 'Đã xác nhận'
+        1 => 'Pending',
+        2 => 'Approved'
     ];
 
     public function user()

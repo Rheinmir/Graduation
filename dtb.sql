@@ -197,7 +197,7 @@ CREATE TABLE `schedules` (
 --
 
 INSERT INTO `schedules` (`id`, `title`, `schedule_date`, `contents`, `status`, `created_at`, `updated_at`) VALUES
-(2, 'Lịch hẹn ngày nào', '2024-06-12', '<p>Lịch hẹn ngày nào  ádasdasd</p>', 2, '2024-06-01 02:14:39', '2024-06-01 02:20:11'),
+(2, 'Schedule ngày nào', '2024-06-12', '<p>Schedule ngày nào  ádasdasd</p>', 2, '2024-06-01 02:14:39', '2024-06-01 02:20:11'),
 (3, 'lịch hẹn ngày 1444', '2024-06-19', '<p>lịch hẹn ngày 1444<br></p>', 1, '2024-06-01 02:19:32', '2024-06-01 02:19:32'),
 (4, 'Hẹn họp ngày 02/06', '2024-06-02', '<p>Mô tả về ngày hẹn gì dsfdsfsdf</p><p><br></p><p><br></p>', 1, '2024-06-01 02:48:28', '2024-06-01 02:48:38');
 

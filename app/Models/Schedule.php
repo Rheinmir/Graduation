@@ -22,8 +22,8 @@ class Schedule extends Model
     ];
 
     const STATUS = [
-        1 => 'Hoạt động',
-        2 => 'Bản nháp',
+        1 => 'Active',
+        2 => 'Closed',
     ];
 
     /**

@@ -210,7 +210,7 @@ class AccountController extends Controller
         $schedule = Schedule::find($id);
 
         if (!$schedule) {
-            return redirect()->back()->with('error', 'Dữ liệu không tồn tại');
+            return redirect()->back()->with('error', 'Data is not exist');
         }
 
         $schedule_users = ScheduleUser::with(['user', 'schedule'])->where('schedule_id', $id)->get();
@@ -224,7 +224,7 @@ class AccountController extends Controller
         $schedule = Schedule::find($id);
 
         if (!$schedule) {
-            return redirect()->back()->with('error', 'Dữ liệu không tồn tại');
+            return redirect()->back()->with('error', 'Data is not exist');
         }
 
         $user = auth('cus')->user();
@@ -239,7 +239,7 @@ class AccountController extends Controller
         $schedule = Schedule::find($id);
 
         if (!$schedule) {
-            return redirect()->back()->with('error', 'Dữ liệu không tồn tại');
+            return redirect()->back()->with('error', 'Data is not exist');
         }
 
         $user = auth('cus')->user();
@@ -247,7 +247,7 @@ class AccountController extends Controller
         $schedule_user = ScheduleUser::where(['user_id' => $user->id, 'schedule_id' => $schedule->id])->first();
 
         if ($schedule_user) {
-            return redirect()->route('account.schedule')->with('no','Bạn đã đăng ký');
+            return redirect()->route('account.schedule')->with('no','Requested');
         }
 
         $data = [
@@ -258,7 +258,7 @@ class AccountController extends Controller
 
         ScheduleUser::create($data);
 
-        return redirect()->route('account.schedule')->with('ok','Đăng ký thành công lịch hẹn.');
+        return redirect()->route('account.schedule')->with('ok','Request successfully.');
 
     }
 }

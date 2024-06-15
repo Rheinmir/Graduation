@@ -13,7 +13,7 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="{{ route('home.index') }}">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Regiser</li>
+                                <li class="breadcrumb-item active" aria-current="page">Your profile</li>
                             </ol>
                         </nav>
                     </div>
@@ -34,7 +34,7 @@
                     <div class="col-lg-9">
                         <div class="contact-content">
                             <div class="section-title mb-15">
-                                <span class="sub-title">Create your account</span>
+                                <span class="sub-title">Information</span>
                                 <h2 class="title">Get in <span>Touch</span></h2>
                             </div>
                             <p>Ecourses allow you to learn at their own pace, fitting their busy schedules for your lifelong learning</p>
@@ -47,31 +47,17 @@
                                             <div class="help-block">{{ $message }}</div>
                                         @enderror
                                     </div>
-                                    <div class="form-group mg-top-15">
+                                    <div class="ifor form-group mg-top-15">
                                         <input name="email" class="form-control" value="{{ $auth->email }}" type="email" placeholder="Your Email *" required>
                                         @error('email')
                                             <div class="help-block">{{ $message }}</div>
                                         @enderror
                                     </div>
-                                    <div class="form-group mg-top-15">
+                                    <div class="ifor form-group mg-top-15">
                                         <input name="phone" class="form-control" value="{{ $auth->phone }}" type="text" placeholder="Your phone *" required>
                                     </div>
-                                    <div class="form-group mg-top-15">
+                                    <div class="ifor form-group mg-top-15">
                                         <input name="address" class="form-control" value="{{ $auth->address }}" type="text" placeholder="Your address *" required>
-                                    </div>
-                                    <div class="form-group mg-top-15">
-                                        <select name="gender" class="form-control">
-                                            <option value="">Select One</option>
-                                            <option value="1" {{ $auth->gender == 1 ? 'selected' : ''}}>Male</option>
-                                            <option value="0"  {{ $auth->gender == 0 ? 'selected' : ''}}>Fe Male</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="form-group mg-top-15">
-                                        <input name="password" class="form-control" type="text" placeholder="Your password *" required>
-                                        @error('password')
-                                            <div class="help-block">{{ $message }}</div>
-                                        @enderror
                                     </div>
 
                                     <button type="submit" style="margin-top: 15px">Update Profile</button>

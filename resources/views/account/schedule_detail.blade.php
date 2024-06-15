@@ -9,11 +9,11 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="breadcrumb-content">
-                            <h2 class="title">Chi tiết lịch hẹn</h2>
+                            <h2 class="title">Detail</h2>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="{{ route('home.index') }}">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">>Chi tiết lịch hẹn</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Detail</li>
                                 </ol>
                             </nav>
                         </div>
@@ -32,18 +32,18 @@
                         <div class="col-lg-9">
                             <div class="row invoice-info">
                                 <div class="section-title mb-15">
-                                    <span class="sub-title">Chi tiết lịch hẹn</span>
+                                    <span class="sub-title">Detail</span>
                                     <h2 class="title">{{ $schedule->title }}</h2>
                                 </div>
-                                <p>Chi tiết lịch hẹn</p>
+                                <p>Detail</p>
                                 <div class="col-sm-12 text-right">
                                     @if (!$schedule_user)
-                                    <a href="{{ route('register.schedule', $schedule->id) }}" class="btn btn-success text-right" style="float: right;">Đăng ký</a>
+                                    <a href="{{ route('register.schedule', $schedule->id) }}" class="btn btn-success text-right" style="float: right;">Request</a>
                                     @endif
                                 </div>
                                 <div class="col-sm-6">
-                                    <p style="color: black">Tiêu đề : <b>{{ isset($schedule) ? $schedule->title : '' }}</b></p>
-                                    <p style="color: black">Ngày hẹn : <b>{{ isset($schedule) ? $schedule->schedule_date : '' }}</b></p>
+                                    <p style="color: black">Title : <b>{{ isset($schedule) ? $schedule->title : '' }}</b></p>
+                                    <p style="color: black">Date : <b>{{ isset($schedule) ? $schedule->schedule_date : '' }}</b></p>
                                 </div>
                                 <div style="color: black;" class="schedule-content">
                                     {!! $schedule->contents !!}

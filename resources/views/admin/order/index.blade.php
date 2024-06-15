@@ -1,5 +1,5 @@
 @extends('master.admin')
-@section('title','Danh sách đơn hàng')
+@section('title','Order List')
 @section('main')
 
     <table class="table">
@@ -19,13 +19,13 @@
                     <td>{{ $item->created_at->format('d/m/Y') }}</td>
                     <td>
                         @if ($item->status == 0)
-                            <span>Chưa xác nhận</span>
+                            <span>Pending</span>
                         @elseif ($item->status == 1)
-                            <span>Đã xác nhận</span>
+                            <span>Confirmed</span>
                         @elseif ($item->status == 2)
-                            <span>Đã thanh toán</span>
+                            <span>Completed</span>
                         @else
-                            <span>Đã Hủy</span>
+                            <span>Canceled</span>
                         @endif
                     </td>
                     <td>{{ number_format($item->totalPrice) }}</td>

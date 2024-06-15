@@ -9,11 +9,11 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="breadcrumb-content">
-                            <h2 class="title">Danh sách thành viên</h2>
+                            <h2 class="title">List</h2>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="{{ route('home.index') }}">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">>Danh sách thành viên</li>
+                                    <li class="breadcrumb-item active" aria-current="page">>List</li>
                                 </ol>
                             </nav>
                         </div>
@@ -32,17 +32,17 @@
                         <div class="col-lg-9">
                             <div class="contact-content">
                                 <div class="section-title mb-15">
-                                    <span class="sub-title">Danh sách thành viên</span>
+                                    <span class="sub-title">List</span>
                                     <h2 class="title">{{ $schedule->title }}</h2>
                                 </div>
-                                <p>Danh sách thành viên</p>
+                                <p>List</p>
                                 <table class="table table-hover">
                                     <thead>
                                     <tr>
-                                        <th class=" text-center">STT</th>
-                                        <th>Người đăng ký</th>
-                                        <th>Lịch hẹn</th>
-                                        <th>Trạng thái</th>
+                                        <th class=" text-center">No.</th>
+                                        <th>Requester</th>
+                                        <th>Date</th>
+                                        <th>Status</th>
                                     </tr>
                                     </thead>
                                     <tbody>
